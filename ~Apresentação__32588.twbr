@@ -1,0 +1,3399 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.0310.1044                               -->
+<workbook original-version='18.1' source-build='2023.1.0 (20231.23.0310.1044)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <BasicButtonObjectTextSupport />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column alias='Letterboxd' caption='Nome da tabela (ranking)' datatype='string' name='[Parâmetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;boxd_250&quot;'>
+        <calculation class='tableau' formula='&quot;boxd_250&quot;' />
+        <aliases>
+          <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+          <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+          <alias key='&quot;imdb_250&quot;' value='IMDb' />
+        </aliases>
+        <members>
+          <member alias='IMDb' value='&quot;imdb_250&quot;' />
+          <member alias='BFI Sight &amp; Sound' value='&quot;bfi_250&quot;' />
+          <member alias='Letterboxd' value='&quot;boxd_250&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='imdb_250 (top_250_films)' inline='true' name='federated.165z5241gt3u1a10dy11x1w3cj9c' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='127.0.0.1' name='mysql.07tnro61r3481y1dvtxgq024b2tu'>
+            <connection class='mysql' dbname='top_250_films' odbc-native-protocol='' one-time-sql='' port='3306' server='127.0.0.1' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation all='true' name='imdb_250+' type='union'>
+          <relation connection='mysql.07tnro61r3481y1dvtxgq024b2tu' name='imdb_250' table='[imdb_250]' type='table' />
+          <relation connection='mysql.07tnro61r3481y1dvtxgq024b2tu' name='boxd_250' table='[boxd_250]' type='table' />
+          <relation connection='mysql.07tnro61r3481y1dvtxgq024b2tu' name='bfi_250' table='[bfi_250]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation all='true' name='imdb_250+' type='union'>
+          <relation connection='mysql.07tnro61r3481y1dvtxgq024b2tu' name='imdb_250' table='[imdb_250]' type='table' />
+          <relation connection='mysql.07tnro61r3481y1dvtxgq024b2tu' name='boxd_250' table='[boxd_250]' type='table' />
+          <relation connection='mysql.07tnro61r3481y1dvtxgq024b2tu' name='bfi_250' table='[bfi_250]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Title</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Title]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Title</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Runtime</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Runtime]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Runtime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rated</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Rated]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Rated</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Genres</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Genres]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Genres</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Directors</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Directors]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Directors</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Writers</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Writers]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Writers</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Actors</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Actors]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Actors</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Languages</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Languages]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Languages</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IMDb Rating</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[IMDb Rating]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>IMDb Rating</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of ratings</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Number of ratings]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Number of ratings</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ranking</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Ranking]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Ranking</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[imdb_250+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[imdb_250_61B4A56179B44D28BFE5888C091548BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Ranking (numérico)' datatype='integer' name='[Calculation_2293176654616170497]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='int(REPLACE([Ranking], &apos;=&apos;, &apos;&apos;))' />
+      </column>
+      <column datatype='string' name='[Country (grupo)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <calculation class='categorical-bin' column='[Country]' new-bin='true'>
+          <bin default-name='false' value='&quot;Angola&quot;'>
+            <value>&quot;Angola, France&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Argentina&quot;'>
+            <value>&quot;Argentina&quot;</value>
+            <value>&quot;Argentina, Brazil, Spain, Dominican Republic, France, Netherlands, Mexico, Switzerland, United States, Portugal, Lebanon&quot;</value>
+            <value>&quot;Argentina, France, Italy, Spain&quot;</value>
+            <value>&quot;Argentina, France, Spain, Japan&quot;</value>
+            <value>&quot;Argentina, Spain&quot;</value>
+            <value>&quot;Argentina, Spain, France, United Kingdom&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Australia&quot;'>
+            <value>&quot;Australia&quot;</value>
+            <value>&quot;Australia, France&quot;</value>
+            <value>&quot;Australia, United States, United Kingdom, China&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Austria&quot;'>
+            <value>&quot;Austria&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Belgium&quot;'>
+            <value>&quot;Belgium, France&quot;</value>
+            <value>&quot;Belgium, France, West Germany&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Brazil&quot;'>
+            <value>&quot;Brazil&quot;</value>
+            <value>&quot;Brazil, Argentina, Italy&quot;</value>
+            <value>&quot;Brazil, France&quot;</value>
+            <value>&quot;Brazil, France, Germany&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Canada&quot;'>
+            <value>&quot;Canada&quot;</value>
+            <value>&quot;Canada, France&quot;</value>
+            <value>&quot;Canada, Germany&quot;</value>
+            <value>&quot;Canada, United States&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;China&quot;'>
+            <value>&quot;China&quot;</value>
+            <value>&quot;China, Hong Kong&quot;</value>
+            <value>&quot;China, Netherlands&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Cuba&quot;'>
+            <value>&quot;Cuba&quot;</value>
+            <value>&quot;Cuba, Soviet Union&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Czechoslovakia&quot;'>
+            <value>&quot;Czechoslovakia&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Denmark&quot;'>
+            <value>&quot;Denmark&quot;</value>
+            <value>&quot;Denmark, Sweden&quot;</value>
+            <value>&quot;Denmark, Sweden, France, Germany&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;France&quot;'>
+            <value>&quot;France&quot;</value>
+            <value>&quot;France, Algeria&quot;</value>
+            <value>&quot;France, Algeria, Mauritania&quot;</value>
+            <value>&quot;France, Germany&quot;</value>
+            <value>&quot;France, Germany, Chile, Spain&quot;</value>
+            <value>&quot;France, Germany, Italy, Canada, United States, United Kingdom, Hungary, Spain, Czech Republic&quot;</value>
+            <value>&quot;France, Italy&quot;</value>
+            <value>&quot;France, Italy, Greece, Germany&quot;</value>
+            <value>&quot;France, Japan&quot;</value>
+            <value>&quot;France, Poland, Germany, United Kingdom&quot;</value>
+            <value>&quot;France, Sweden&quot;</value>
+            <value>&quot;France, Switzerland&quot;</value>
+            <value>&quot;France, Switzerland, Poland&quot;</value>
+            <value>&quot;France, United States&quot;</value>
+            <value>&quot;France, West Germany&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Germany&quot;'>
+            <value>&quot;Germany&quot;</value>
+            <value>&quot;Germany, Austria, Italy&quot;</value>
+            <value>&quot;Germany, France&quot;</value>
+            <value>&quot;Germany, United States&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Greece&quot;'>
+            <value>&quot;Greece, France, Italy&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Hong Kong&quot;'>
+            <value>&quot;Hong Kong&quot;</value>
+            <value>&quot;Hong Kong, China&quot;</value>
+            <value>&quot;Hong Kong, France&quot;</value>
+            <value>&quot;Hong Kong, South Korea, Japan&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Hungary&quot;'>
+            <value>&quot;Hungary, Germany, Switzerland&quot;</value>
+            <value>&quot;Hungary, Italy, Germany, France&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;India&quot;'>
+            <value>&quot;India&quot;</value>
+            <value>&quot;India, United States&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Iran&quot;'>
+            <value>&quot;Iran&quot;</value>
+            <value>&quot;Iran, France&quot;</value>
+            <value>&quot;Iran, France, Australia&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Ireland&quot;'>
+            <value>&quot;Ireland, Canada, United Kingdom, United States&quot;</value>
+            <value>&quot;Ireland, United Kingdom&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Italy&quot;'>
+            <value>&quot;Italy&quot;</value>
+            <value>&quot;Italy, Algeria&quot;</value>
+            <value>&quot;Italy, Canada&quot;</value>
+            <value>&quot;Italy, France&quot;</value>
+            <value>&quot;Italy, France, United States, Brazil&quot;</value>
+            <value>&quot;Italy, France, West Germany&quot;</value>
+            <value>&quot;Italy, Spain, West Germany&quot;</value>
+            <value>&quot;Italy, United States&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Japan&quot;'>
+            <value>&quot;Japan&quot;</value>
+            <value>&quot;Japan, France&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Lebanon&quot;'>
+            <value>&quot;Lebanon, France, Cyprus, Qatar, United Kingdom&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Mexico&quot;'>
+            <value>&quot;Mexico&quot;</value>
+            <value>&quot;Mexico, Netherlands&quot;</value>
+            <value>&quot;Mexico, Spain&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;New Zealand&quot;'>
+            <value>&quot;New Zealand, United States&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;Philippines&quot;'>
+            <value>&quot;Philippines&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Portugal&quot;'>
+            <value>&quot;Portugal&quot;</value>
+            <value>&quot;Portugal, Germany, Switzerland&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Senegal&quot;'>
+            <value>&quot;Senegal&quot;</value>
+            <value>&quot;Senegal, France&quot;</value>
+          </bin>
+          <bin default-name='true' value='&quot;South Korea&quot;'>
+            <value>&quot;South Korea&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Soviet Union&quot;'>
+            <value>&quot;Soviet Union&quot;</value>
+            <value>&quot;Soviet Union, Japan&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Spain&quot;'>
+            <value>&quot;Spain&quot;</value>
+            <value>&quot;Spain, France&quot;</value>
+            <value>&quot;Spain, United Kingdom, United States&quot;</value>
+            <value>&quot;Spain, United States&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Sweden&quot;'>
+            <value>&quot;Sweden&quot;</value>
+            <value>&quot;Sweden, France&quot;</value>
+            <value>&quot;Sweden, France, United Kingdom&quot;</value>
+            <value>&quot;Sweden, France, West Germany&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Taiwan&quot;'>
+            <value>&quot;Taiwan&quot;</value>
+            <value>&quot;Taiwan, Hong Kong&quot;</value>
+            <value>&quot;Taiwan, Japan&quot;</value>
+            <value>&quot;Taiwan, South Korea&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Thailand&quot;'>
+            <value>&quot;Thailand, France, Austria&quot;</value>
+            <value>&quot;Thailand, France, Germany, Italy&quot;</value>
+            <value>&quot;Thailand, United Kingdom, France, Germany, Spain, Netherlands&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Turkey&quot;'>
+            <value>&quot;Turkey&quot;</value>
+            <value>&quot;Turkey, Bosnia and Herzegovina&quot;</value>
+            <value>&quot;Turkey, France, Germany, Netherlands, Greece, Croatia&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;United Kingdom&quot;'>
+            <value>&quot;UK&quot;</value>
+            <value>&quot;United Kingdom&quot;</value>
+            <value>&quot;United Kingdom, Canada&quot;</value>
+            <value>&quot;United Kingdom, France, United States, China, Canada&quot;</value>
+            <value>&quot;United Kingdom, Germany, United States, France&quot;</value>
+            <value>&quot;United Kingdom, Italy&quot;</value>
+            <value>&quot;United Kingdom, Russia, Italy, France, Netherlands&quot;</value>
+            <value>&quot;United Kingdom, South Africa, Italy, United States&quot;</value>
+            <value>&quot;United Kingdom, Switzerland&quot;</value>
+            <value>&quot;United Kingdom, United States&quot;</value>
+            <value>&quot;United Kingdom, United States, India, Spain&quot;</value>
+            <value>&quot;United Kingdom, West Germany&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;United States&quot;'>
+            <value>&quot;United States&quot;</value>
+            <value>&quot;United States, Australia&quot;</value>
+            <value>&quot;United States, Austria&quot;</value>
+            <value>&quot;United States, Canada&quot;</value>
+            <value>&quot;United States, China&quot;</value>
+            <value>&quot;United States, Denmark&quot;</value>
+            <value>&quot;United States, France&quot;</value>
+            <value>&quot;United States, France, Italy&quot;</value>
+            <value>&quot;United States, Germany&quot;</value>
+            <value>&quot;United States, Germany, Australia&quot;</value>
+            <value>&quot;United States, Hong Kong&quot;</value>
+            <value>&quot;United States, India&quot;</value>
+            <value>&quot;United States, Japan&quot;</value>
+            <value>&quot;United States, United Kingdom&quot;</value>
+            <value>&quot;United States, United Kingdom, Canada&quot;</value>
+            <value>&quot;United States, United Kingdom, Germany&quot;</value>
+            <value>&quot;United States, United Kingdom, Japan&quot;</value>
+            <value>&quot;United States, United Kingdom, Malta, Morocco&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;West Germany&quot;'>
+            <value>&quot;West Germany&quot;</value>
+            <value>&quot;West Germany, France&quot;</value>
+            <value>&quot;West Germany, France, United Kingdom, United States&quot;</value>
+            <value>&quot;West Germany, Italy, France, United Kingdom&quot;</value>
+            <value>&quot;West Germany, Mexico&quot;</value>
+            <value>&quot;West Germany, United Kingdom&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Yugoslavia&quot;'>
+            <value>&quot;Yugoslavia, Italy, United Kingdom&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[France (group)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <calculation class='categorical-bin' column='[Country]' default='&quot;Outros&quot;' new-bin='true'>
+          <bin default-name='false' value='&quot;France&quot;'>
+            <value>&quot;Angola, France&quot;</value>
+            <value>&quot;Argentina, Brazil, Spain, Dominican Republic, France, Netherlands, Mexico, Switzerland, United States, Portugal, Lebanon&quot;</value>
+            <value>&quot;Argentina, France, Italy, Spain&quot;</value>
+            <value>&quot;Argentina, France, Spain, Japan&quot;</value>
+            <value>&quot;Argentina, Spain, France, United Kingdom&quot;</value>
+            <value>&quot;Australia, France&quot;</value>
+            <value>&quot;Belgium, France&quot;</value>
+            <value>&quot;Belgium, France, West Germany&quot;</value>
+            <value>&quot;Brazil, France&quot;</value>
+            <value>&quot;Brazil, France, Germany&quot;</value>
+            <value>&quot;Canada, France&quot;</value>
+            <value>&quot;Denmark, Sweden, France, Germany&quot;</value>
+            <value>&quot;France&quot;</value>
+            <value>&quot;France, Algeria&quot;</value>
+            <value>&quot;France, Algeria, Mauritania&quot;</value>
+            <value>&quot;France, Germany&quot;</value>
+            <value>&quot;France, Germany, Chile, Spain&quot;</value>
+            <value>&quot;France, Germany, Italy, Canada, United States, United Kingdom, Hungary, Spain, Czech Republic&quot;</value>
+            <value>&quot;France, Italy&quot;</value>
+            <value>&quot;France, Italy, Greece, Germany&quot;</value>
+            <value>&quot;France, Japan&quot;</value>
+            <value>&quot;France, Poland, Germany, United Kingdom&quot;</value>
+            <value>&quot;France, Sweden&quot;</value>
+            <value>&quot;France, Switzerland&quot;</value>
+            <value>&quot;France, Switzerland, Poland&quot;</value>
+            <value>&quot;France, United States&quot;</value>
+            <value>&quot;France, West Germany&quot;</value>
+            <value>&quot;Germany, France&quot;</value>
+            <value>&quot;Greece, France, Italy&quot;</value>
+            <value>&quot;Hong Kong, France&quot;</value>
+            <value>&quot;Hungary, Italy, Germany, France&quot;</value>
+            <value>&quot;Italy, France&quot;</value>
+            <value>&quot;Italy, France, United States, Brazil&quot;</value>
+            <value>&quot;Italy, France, West Germany&quot;</value>
+            <value>&quot;Japan, France&quot;</value>
+            <value>&quot;Lebanon, France, Cyprus, Qatar, United Kingdom&quot;</value>
+            <value>&quot;Senegal, France&quot;</value>
+            <value>&quot;Spain, France&quot;</value>
+            <value>&quot;Sweden, France&quot;</value>
+            <value>&quot;Sweden, France, United Kingdom&quot;</value>
+            <value>&quot;Sweden, France, West Germany&quot;</value>
+            <value>&quot;Thailand, France, Austria&quot;</value>
+            <value>&quot;Thailand, France, Germany, Italy&quot;</value>
+            <value>&quot;Turkey, France, Germany, Netherlands, Greece, Croatia&quot;</value>
+            <value>&quot;United Kingdom, France, United States, China, Canada&quot;</value>
+            <value>&quot;United States, France&quot;</value>
+            <value>&quot;United States, France, Italy&quot;</value>
+            <value>&quot;West Germany, France&quot;</value>
+            <value>&quot;West Germany, France, United Kingdom, United States&quot;</value>
+            <value>&quot;West Germany, Italy, France, United Kingdom&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='Popular Genres (grupo)' datatype='string' name='[Genres (grupo) 1]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Genres]' default='&quot;Outros&quot;' new-bin='true'>
+          <bin default-name='false' value='&quot;Popular Genres&quot;'>
+            <value>&quot;Action, Adventure&quot;</value>
+            <value>&quot;Action, Adventure, Biography&quot;</value>
+            <value>&quot;Action, Adventure, Comedy&quot;</value>
+            <value>&quot;Action, Adventure, Drama&quot;</value>
+            <value>&quot;Action, Adventure, Fantasy&quot;</value>
+            <value>&quot;Action, Adventure, Mystery&quot;</value>
+            <value>&quot;Action, Adventure, Sci-Fi&quot;</value>
+            <value>&quot;Action, Adventure, Western&quot;</value>
+            <value>&quot;Action, Biography, Drama&quot;</value>
+            <value>&quot;Action, Comedy&quot;</value>
+            <value>&quot;Action, Comedy, Crime&quot;</value>
+            <value>&quot;Action, Comedy, Drama&quot;</value>
+            <value>&quot;Action, Comedy, Romance&quot;</value>
+            <value>&quot;Action, Crime, Drama&quot;</value>
+            <value>&quot;Action, Drama&quot;</value>
+            <value>&quot;Action, Drama, Mystery&quot;</value>
+            <value>&quot;Action, Drama, Sci-Fi&quot;</value>
+            <value>&quot;Action, Drama, Sport&quot;</value>
+            <value>&quot;Action, Drama, Thriller&quot;</value>
+            <value>&quot;Action, Drama, War&quot;</value>
+            <value>&quot;Action, Sci-Fi&quot;</value>
+            <value>&quot;Action, Thriller&quot;</value>
+            <value>&quot;Adventure, Biography, Drama&quot;</value>
+            <value>&quot;Adventure, Comedy, Crime&quot;</value>
+            <value>&quot;Adventure, Comedy, Drama&quot;</value>
+            <value>&quot;Adventure, Comedy, Family&quot;</value>
+            <value>&quot;Adventure, Comedy, Fantasy&quot;</value>
+            <value>&quot;Adventure, Comedy, Sci-Fi&quot;</value>
+            <value>&quot;Adventure, Drama&quot;</value>
+            <value>&quot;Adventure, Drama, History&quot;</value>
+            <value>&quot;Adventure, Drama, Romance&quot;</value>
+            <value>&quot;Adventure, Drama, Sci-Fi&quot;</value>
+            <value>&quot;Adventure, Drama, Thriller&quot;</value>
+            <value>&quot;Adventure, Drama, War&quot;</value>
+            <value>&quot;Adventure, Drama, Western&quot;</value>
+            <value>&quot;Adventure, Family, Fantasy&quot;</value>
+            <value>&quot;Adventure, Sci-Fi&quot;</value>
+            <value>&quot;Adventure, Thriller&quot;</value>
+            <value>&quot;Adventure, Western&quot;</value>
+            <value>&quot;Animation, Action, Adventure&quot;</value>
+            <value>&quot;Animation, Action, Drama&quot;</value>
+            <value>&quot;Animation, Adventure, Comedy&quot;</value>
+            <value>&quot;Animation, Adventure, Drama&quot;</value>
+            <value>&quot;Animation, Adventure, Family&quot;</value>
+            <value>&quot;Animation, Comedy, Drama&quot;</value>
+            <value>&quot;Animation, Comedy, Family&quot;</value>
+            <value>&quot;Animation, Crime, Drama&quot;</value>
+            <value>&quot;Animation, Drama, Family&quot;</value>
+            <value>&quot;Animation, Drama, Fantasy&quot;</value>
+            <value>&quot;Animation, Drama, War&quot;</value>
+            <value>&quot;Comedy&quot;</value>
+            <value>&quot;Comedy, Crime&quot;</value>
+            <value>&quot;Comedy, Crime, Drama&quot;</value>
+            <value>&quot;Comedy, Crime, Romance&quot;</value>
+            <value>&quot;Comedy, Drama&quot;</value>
+            <value>&quot;Comedy, Drama, Family&quot;</value>
+            <value>&quot;Comedy, Drama, Fantasy&quot;</value>
+            <value>&quot;Comedy, Drama, Music&quot;</value>
+            <value>&quot;Comedy, Drama, Musical&quot;</value>
+            <value>&quot;Comedy, Drama, Mystery&quot;</value>
+            <value>&quot;Comedy, Drama, Romance&quot;</value>
+            <value>&quot;Comedy, Drama, Sci-Fi&quot;</value>
+            <value>&quot;Comedy, Drama, Thriller&quot;</value>
+            <value>&quot;Comedy, Drama, War&quot;</value>
+            <value>&quot;Comedy, Fantasy&quot;</value>
+            <value>&quot;Comedy, Music, Romance&quot;</value>
+            <value>&quot;Comedy, Musical&quot;</value>
+            <value>&quot;Comedy, Musical, Romance&quot;</value>
+            <value>&quot;Comedy, Romance&quot;</value>
+            <value>&quot;Comedy, Romance, War&quot;</value>
+            <value>&quot;Comedy, War&quot;</value>
+            <value>&quot;Crime, Drama&quot;</value>
+            <value>&quot;Crime, Drama, Fantasy&quot;</value>
+            <value>&quot;Crime, Drama, Film-Noir&quot;</value>
+            <value>&quot;Crime, Drama, Horror&quot;</value>
+            <value>&quot;Crime, Drama, Music&quot;</value>
+            <value>&quot;Crime, Drama, Mystery&quot;</value>
+            <value>&quot;Crime, Drama, Romance&quot;</value>
+            <value>&quot;Crime, Drama, Sport&quot;</value>
+            <value>&quot;Crime, Drama, Thriller&quot;</value>
+            <value>&quot;Crime, Mystery, Thriller&quot;</value>
+            <value>&quot;Crime, Sci-Fi&quot;</value>
+            <value>&quot;Crime, Thriller&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Genres (grupo)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Genres]' new-bin='true'>
+          <bin default-name='false' value='&quot;Action&quot;'>
+            <value>&quot;Action, Adventure&quot;</value>
+            <value>&quot;Action, Adventure, Biography&quot;</value>
+            <value>&quot;Action, Adventure, Comedy&quot;</value>
+            <value>&quot;Action, Adventure, Drama&quot;</value>
+            <value>&quot;Action, Adventure, Fantasy&quot;</value>
+            <value>&quot;Action, Adventure, Mystery&quot;</value>
+            <value>&quot;Action, Adventure, Sci-Fi&quot;</value>
+            <value>&quot;Action, Adventure, Western&quot;</value>
+            <value>&quot;Action, Biography, Drama&quot;</value>
+            <value>&quot;Action, Comedy&quot;</value>
+            <value>&quot;Action, Comedy, Crime&quot;</value>
+            <value>&quot;Action, Comedy, Drama&quot;</value>
+            <value>&quot;Action, Comedy, Romance&quot;</value>
+            <value>&quot;Action, Crime, Drama&quot;</value>
+            <value>&quot;Action, Drama&quot;</value>
+            <value>&quot;Action, Drama, Mystery&quot;</value>
+            <value>&quot;Action, Drama, Sci-Fi&quot;</value>
+            <value>&quot;Action, Drama, Sport&quot;</value>
+            <value>&quot;Action, Drama, Thriller&quot;</value>
+            <value>&quot;Action, Drama, War&quot;</value>
+            <value>&quot;Action, Sci-Fi&quot;</value>
+            <value>&quot;Action, Thriller&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Adventure&quot;'>
+            <value>&quot;Adventure, Biography, Drama&quot;</value>
+            <value>&quot;Adventure, Comedy, Crime&quot;</value>
+            <value>&quot;Adventure, Comedy, Drama&quot;</value>
+            <value>&quot;Adventure, Comedy, Family&quot;</value>
+            <value>&quot;Adventure, Comedy, Fantasy&quot;</value>
+            <value>&quot;Adventure, Comedy, Sci-Fi&quot;</value>
+            <value>&quot;Adventure, Drama&quot;</value>
+            <value>&quot;Adventure, Drama, History&quot;</value>
+            <value>&quot;Adventure, Drama, Romance&quot;</value>
+            <value>&quot;Adventure, Drama, Sci-Fi&quot;</value>
+            <value>&quot;Adventure, Drama, Thriller&quot;</value>
+            <value>&quot;Adventure, Drama, War&quot;</value>
+            <value>&quot;Adventure, Drama, Western&quot;</value>
+            <value>&quot;Adventure, Family, Fantasy&quot;</value>
+            <value>&quot;Adventure, Sci-Fi&quot;</value>
+            <value>&quot;Adventure, Thriller&quot;</value>
+            <value>&quot;Adventure, Western&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Animation&quot;'>
+            <value>&quot;Animation, Action, Adventure&quot;</value>
+            <value>&quot;Animation, Action, Drama&quot;</value>
+            <value>&quot;Animation, Adventure, Comedy&quot;</value>
+            <value>&quot;Animation, Adventure, Drama&quot;</value>
+            <value>&quot;Animation, Adventure, Family&quot;</value>
+            <value>&quot;Animation, Comedy, Drama&quot;</value>
+            <value>&quot;Animation, Comedy, Family&quot;</value>
+            <value>&quot;Animation, Crime, Drama&quot;</value>
+            <value>&quot;Animation, Drama, Family&quot;</value>
+            <value>&quot;Animation, Drama, Fantasy&quot;</value>
+            <value>&quot;Animation, Drama, War&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Biography&quot;'>
+            <value>&quot;Biography, Comedy, Crime&quot;</value>
+            <value>&quot;Biography, Comedy, Drama&quot;</value>
+            <value>&quot;Biography, Crime, Drama&quot;</value>
+            <value>&quot;Biography, Drama&quot;</value>
+            <value>&quot;Biography, Drama, Family&quot;</value>
+            <value>&quot;Biography, Drama, Fantasy&quot;</value>
+            <value>&quot;Biography, Drama, History&quot;</value>
+            <value>&quot;Biography, Drama, Music&quot;</value>
+            <value>&quot;Biography, Drama, Sport&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Comedy&quot;'>
+            <value>&quot;Comedy&quot;</value>
+            <value>&quot;Comedy, Crime&quot;</value>
+            <value>&quot;Comedy, Crime, Drama&quot;</value>
+            <value>&quot;Comedy, Crime, Romance&quot;</value>
+            <value>&quot;Comedy, Drama&quot;</value>
+            <value>&quot;Comedy, Drama, Family&quot;</value>
+            <value>&quot;Comedy, Drama, Fantasy&quot;</value>
+            <value>&quot;Comedy, Drama, Music&quot;</value>
+            <value>&quot;Comedy, Drama, Musical&quot;</value>
+            <value>&quot;Comedy, Drama, Mystery&quot;</value>
+            <value>&quot;Comedy, Drama, Romance&quot;</value>
+            <value>&quot;Comedy, Drama, Sci-Fi&quot;</value>
+            <value>&quot;Comedy, Drama, Thriller&quot;</value>
+            <value>&quot;Comedy, Drama, War&quot;</value>
+            <value>&quot;Comedy, Fantasy&quot;</value>
+            <value>&quot;Comedy, Music, Romance&quot;</value>
+            <value>&quot;Comedy, Musical&quot;</value>
+            <value>&quot;Comedy, Musical, Romance&quot;</value>
+            <value>&quot;Comedy, Romance&quot;</value>
+            <value>&quot;Comedy, Romance, War&quot;</value>
+            <value>&quot;Comedy, War&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Crime&quot;'>
+            <value>&quot;Crime, Drama&quot;</value>
+            <value>&quot;Crime, Drama, Fantasy&quot;</value>
+            <value>&quot;Crime, Drama, Film-Noir&quot;</value>
+            <value>&quot;Crime, Drama, Horror&quot;</value>
+            <value>&quot;Crime, Drama, Music&quot;</value>
+            <value>&quot;Crime, Drama, Mystery&quot;</value>
+            <value>&quot;Crime, Drama, Romance&quot;</value>
+            <value>&quot;Crime, Drama, Sport&quot;</value>
+            <value>&quot;Crime, Drama, Thriller&quot;</value>
+            <value>&quot;Crime, Mystery, Thriller&quot;</value>
+            <value>&quot;Crime, Sci-Fi&quot;</value>
+            <value>&quot;Crime, Thriller&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Documentary&quot;'>
+            <value>&quot;Documentary&quot;</value>
+            <value>&quot;Documentary, Biography&quot;</value>
+            <value>&quot;Documentary, Drama&quot;</value>
+            <value>&quot;Documentary, History&quot;</value>
+            <value>&quot;Documentary, History, War&quot;</value>
+            <value>&quot;Documentary, Music&quot;</value>
+            <value>&quot;Documentary, Short&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Drama&quot;'>
+            <value>&quot;Drama&quot;</value>
+            <value>&quot;Drama, Comedy&quot;</value>
+            <value>&quot;Drama, Crime&quot;</value>
+            <value>&quot;Drama, Family&quot;</value>
+            <value>&quot;Drama, Family, Fantasy&quot;</value>
+            <value>&quot;Drama, Family, Sport&quot;</value>
+            <value>&quot;Drama, Fantasy&quot;</value>
+            <value>&quot;Drama, Fantasy, Mystery&quot;</value>
+            <value>&quot;Drama, Fantasy, Romance&quot;</value>
+            <value>&quot;Drama, Fantasy, War&quot;</value>
+            <value>&quot;Drama, Film-Noir&quot;</value>
+            <value>&quot;Drama, Film-Noir, Mystery&quot;</value>
+            <value>&quot;Drama, Film-Noir, Romance&quot;</value>
+            <value>&quot;Drama, History&quot;</value>
+            <value>&quot;Drama, History, Romance&quot;</value>
+            <value>&quot;Drama, History, Thriller&quot;</value>
+            <value>&quot;Drama, History, War&quot;</value>
+            <value>&quot;Drama, Horror&quot;</value>
+            <value>&quot;Drama, Horror, Mystery&quot;</value>
+            <value>&quot;Drama, Music&quot;</value>
+            <value>&quot;Drama, Music, Musical&quot;</value>
+            <value>&quot;Drama, Music, Romance&quot;</value>
+            <value>&quot;Drama, Musical&quot;</value>
+            <value>&quot;Drama, Musical, Romance&quot;</value>
+            <value>&quot;Drama, Mystery&quot;</value>
+            <value>&quot;Drama, Mystery, Romance&quot;</value>
+            <value>&quot;Drama, Mystery, Sci-Fi&quot;</value>
+            <value>&quot;Drama, Mystery, Thriller&quot;</value>
+            <value>&quot;Drama, Mystery, War&quot;</value>
+            <value>&quot;Drama, Romance&quot;</value>
+            <value>&quot;Drama, Romance, Sci-Fi&quot;</value>
+            <value>&quot;Drama, Romance, Thriller&quot;</value>
+            <value>&quot;Drama, Romance, War&quot;</value>
+            <value>&quot;Drama, Romance, Western&quot;</value>
+            <value>&quot;Drama, Sci-Fi&quot;</value>
+            <value>&quot;Drama, Sport&quot;</value>
+            <value>&quot;Drama, Thriller&quot;</value>
+            <value>&quot;Drama, Thriller, War&quot;</value>
+            <value>&quot;Drama, Thriller, Western&quot;</value>
+            <value>&quot;Drama, War&quot;</value>
+            <value>&quot;Drama, Western&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Fantasy&quot;'>
+            <value>&quot;Fantasy&quot;</value>
+            <value>&quot;Fantasy, Horror&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Horror&quot;'>
+            <value>&quot;Horror&quot;</value>
+            <value>&quot;Horror, Mystery, Sci-Fi&quot;</value>
+            <value>&quot;Horror, Mystery, Thriller&quot;</value>
+            <value>&quot;Horror, Sci-Fi&quot;</value>
+            <value>&quot;Horror, Sci-Fi, Thriller&quot;</value>
+            <value>&quot;Horror, Thriller&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Mystery&quot;'>
+            <value>&quot;Mystery, Romance, Thriller&quot;</value>
+            <value>&quot;Mystery, Thriller&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Noir&quot;'>
+            <value>&quot;Film-Noir, Mystery, Thriller&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Others&quot;'>
+            <value>&quot;N/A&quot;</value>
+            <value>&quot;Short&quot;</value>
+            <value>&quot;Short, Drama&quot;</value>
+            <value>&quot;Short, Drama, Romance&quot;</value>
+            <value>&quot;Short, Fantasy, Horror&quot;</value>
+            <value>&quot;Short, Fantasy, Mystery&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Genres]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Nome da tabela (grupo)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Table Name]' new-bin='true'>
+          <bin default-name='false' value='&quot;BFI Sight &amp; Sound&quot;'>
+            <value>&quot;bfi_250&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;IMDb&quot;'>
+            <value>&quot;imdb_250&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Letterboxd&quot;'>
+            <value>&quot;boxd_250&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='integer' datatype-customized='true' name='[Number of ratings]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Post-Letterboxd (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Year]' new-bin='true'>
+          <bin default-name='false' value='&quot;Post-Letterboxd&quot;'>
+            <value>&quot;2011&quot;</value>
+            <value>&quot;2011–2019&quot;</value>
+            <value>&quot;2012&quot;</value>
+            <value>&quot;2013&quot;</value>
+            <value>&quot;2014&quot;</value>
+            <value>&quot;2015&quot;</value>
+            <value>&quot;2016&quot;</value>
+            <value>&quot;2017&quot;</value>
+            <value>&quot;2018&quot;</value>
+            <value>&quot;2019&quot;</value>
+            <value>&quot;2020&quot;</value>
+            <value>&quot;2020–2023&quot;</value>
+            <value>&quot;2021&quot;</value>
+            <value>&quot;2022&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Pre-Letterboxd&quot;'>
+            <value>&quot;1916&quot;</value>
+            <value>&quot;1921&quot;</value>
+            <value>&quot;1922&quot;</value>
+            <value>&quot;1924&quot;</value>
+            <value>&quot;1925&quot;</value>
+            <value>&quot;1926&quot;</value>
+            <value>&quot;1927&quot;</value>
+            <value>&quot;1928&quot;</value>
+            <value>&quot;1929&quot;</value>
+            <value>&quot;1931&quot;</value>
+            <value>&quot;1932&quot;</value>
+            <value>&quot;1933&quot;</value>
+            <value>&quot;1934&quot;</value>
+            <value>&quot;1936&quot;</value>
+            <value>&quot;1937&quot;</value>
+            <value>&quot;1938&quot;</value>
+            <value>&quot;1939&quot;</value>
+            <value>&quot;1940&quot;</value>
+            <value>&quot;1941&quot;</value>
+            <value>&quot;1942&quot;</value>
+            <value>&quot;1943&quot;</value>
+            <value>&quot;1944&quot;</value>
+            <value>&quot;1945&quot;</value>
+            <value>&quot;1946&quot;</value>
+            <value>&quot;1947&quot;</value>
+            <value>&quot;1948&quot;</value>
+            <value>&quot;1949&quot;</value>
+            <value>&quot;1950&quot;</value>
+            <value>&quot;1952&quot;</value>
+            <value>&quot;1953&quot;</value>
+            <value>&quot;1954&quot;</value>
+            <value>&quot;1955&quot;</value>
+            <value>&quot;1956&quot;</value>
+            <value>&quot;1957&quot;</value>
+            <value>&quot;1958&quot;</value>
+            <value>&quot;1959&quot;</value>
+            <value>&quot;1960&quot;</value>
+            <value>&quot;1961&quot;</value>
+            <value>&quot;1962&quot;</value>
+            <value>&quot;1963&quot;</value>
+            <value>&quot;1964&quot;</value>
+            <value>&quot;1965&quot;</value>
+            <value>&quot;1966&quot;</value>
+            <value>&quot;1967&quot;</value>
+            <value>&quot;1968&quot;</value>
+            <value>&quot;1969&quot;</value>
+            <value>&quot;1970&quot;</value>
+            <value>&quot;1971&quot;</value>
+            <value>&quot;1972&quot;</value>
+            <value>&quot;1973&quot;</value>
+            <value>&quot;1974&quot;</value>
+            <value>&quot;1975&quot;</value>
+            <value>&quot;1976&quot;</value>
+            <value>&quot;1977&quot;</value>
+            <value>&quot;1978&quot;</value>
+            <value>&quot;1979&quot;</value>
+            <value>&quot;1980&quot;</value>
+            <value>&quot;1981&quot;</value>
+            <value>&quot;1982&quot;</value>
+            <value>&quot;1983&quot;</value>
+            <value>&quot;1984&quot;</value>
+            <value>&quot;1985&quot;</value>
+            <value>&quot;1986&quot;</value>
+            <value>&quot;1987&quot;</value>
+            <value>&quot;1988&quot;</value>
+            <value>&quot;1989&quot;</value>
+            <value>&quot;1989–1999&quot;</value>
+            <value>&quot;1990&quot;</value>
+            <value>&quot;1991&quot;</value>
+            <value>&quot;1992&quot;</value>
+            <value>&quot;1993&quot;</value>
+            <value>&quot;1994&quot;</value>
+            <value>&quot;1994–1995&quot;</value>
+            <value>&quot;1995&quot;</value>
+            <value>&quot;1996&quot;</value>
+            <value>&quot;1997&quot;</value>
+            <value>&quot;1998&quot;</value>
+            <value>&quot;1999&quot;</value>
+            <value>&quot;2000&quot;</value>
+            <value>&quot;2001&quot;</value>
+            <value>&quot;2002&quot;</value>
+            <value>&quot;2003&quot;</value>
+            <value>&quot;2004&quot;</value>
+            <value>&quot;2005&quot;</value>
+            <value>&quot;2006&quot;</value>
+            <value>&quot;2006–2012&quot;</value>
+            <value>&quot;2007&quot;</value>
+            <value>&quot;2007–&quot;</value>
+            <value>&quot;2008&quot;</value>
+            <value>&quot;2009&quot;</value>
+            <value>&quot;2010&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+          <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+          <alias key='&quot;imdb_250&quot;' value='IMDb' />
+        </aliases>
+      </column>
+      <column datatype='string' name='[United States (group)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <calculation class='categorical-bin' column='[Country]' default='&quot;Others&quot;' new-bin='true'>
+          <bin default-name='false' value='&quot;United States&quot;'>
+            <value>&quot;Argentina, Brazil, Spain, Dominican Republic, France, Netherlands, Mexico, Switzerland, United States, Portugal, Lebanon&quot;</value>
+            <value>&quot;Australia, United States, United Kingdom, China&quot;</value>
+            <value>&quot;Canada, United States&quot;</value>
+            <value>&quot;France, Germany, Italy, Canada, United States, United Kingdom, Hungary, Spain, Czech Republic&quot;</value>
+            <value>&quot;Germany, United States&quot;</value>
+            <value>&quot;India, United States&quot;</value>
+            <value>&quot;Ireland, Canada, United Kingdom, United States&quot;</value>
+            <value>&quot;Italy, France, United States, Brazil&quot;</value>
+            <value>&quot;Spain, United Kingdom, United States&quot;</value>
+            <value>&quot;United Kingdom, Germany, United States, France&quot;</value>
+            <value>&quot;United Kingdom, South Africa, Italy, United States&quot;</value>
+            <value>&quot;United Kingdom, United States&quot;</value>
+            <value>&quot;United Kingdom, United States, India, Spain&quot;</value>
+            <value>&quot;United States&quot;</value>
+            <value>&quot;United States, Australia&quot;</value>
+            <value>&quot;United States, Austria&quot;</value>
+            <value>&quot;United States, Canada&quot;</value>
+            <value>&quot;United States, China&quot;</value>
+            <value>&quot;United States, Denmark&quot;</value>
+            <value>&quot;United States, France&quot;</value>
+            <value>&quot;United States, France, Italy&quot;</value>
+            <value>&quot;United States, Germany&quot;</value>
+            <value>&quot;United States, Germany, Australia&quot;</value>
+            <value>&quot;United States, Hong Kong&quot;</value>
+            <value>&quot;United States, India&quot;</value>
+            <value>&quot;United States, Japan&quot;</value>
+            <value>&quot;United States, United Kingdom&quot;</value>
+            <value>&quot;United States, United Kingdom, Canada&quot;</value>
+            <value>&quot;United States, United Kingdom, Germany&quot;</value>
+            <value>&quot;United States, United Kingdom, Japan&quot;</value>
+            <value>&quot;United States, United Kingdom, Malta, Morocco&quot;</value>
+            <value>&quot;West Germany, France, United Kingdom, United States&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='Post-IMDb (group)' datatype='string' name='[Year (grupo)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Year]' new-bin='true'>
+          <bin default-name='false' value='&quot;Post-IMDb&quot;'>
+            <value>&quot;1993&quot;</value>
+            <value>&quot;1994&quot;</value>
+            <value>&quot;1994–1995&quot;</value>
+            <value>&quot;1995&quot;</value>
+            <value>&quot;1996&quot;</value>
+            <value>&quot;1997&quot;</value>
+            <value>&quot;1998&quot;</value>
+            <value>&quot;1999&quot;</value>
+            <value>&quot;2000&quot;</value>
+            <value>&quot;2001&quot;</value>
+            <value>&quot;2002&quot;</value>
+            <value>&quot;2003&quot;</value>
+            <value>&quot;2004&quot;</value>
+            <value>&quot;2005&quot;</value>
+            <value>&quot;2006&quot;</value>
+            <value>&quot;2006–2012&quot;</value>
+            <value>&quot;2007&quot;</value>
+            <value>&quot;2007–&quot;</value>
+            <value>&quot;2008&quot;</value>
+            <value>&quot;2009&quot;</value>
+            <value>&quot;2010&quot;</value>
+            <value>&quot;2011&quot;</value>
+            <value>&quot;2011–2019&quot;</value>
+            <value>&quot;2012&quot;</value>
+            <value>&quot;2013&quot;</value>
+            <value>&quot;2014&quot;</value>
+            <value>&quot;2015&quot;</value>
+            <value>&quot;2016&quot;</value>
+            <value>&quot;2017&quot;</value>
+            <value>&quot;2018&quot;</value>
+            <value>&quot;2019&quot;</value>
+            <value>&quot;2020&quot;</value>
+            <value>&quot;2020–2023&quot;</value>
+            <value>&quot;2021&quot;</value>
+            <value>&quot;2022&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Pre-IMDb&quot;'>
+            <value>&quot;1916&quot;</value>
+            <value>&quot;1921&quot;</value>
+            <value>&quot;1922&quot;</value>
+            <value>&quot;1924&quot;</value>
+            <value>&quot;1925&quot;</value>
+            <value>&quot;1926&quot;</value>
+            <value>&quot;1927&quot;</value>
+            <value>&quot;1928&quot;</value>
+            <value>&quot;1929&quot;</value>
+            <value>&quot;1931&quot;</value>
+            <value>&quot;1932&quot;</value>
+            <value>&quot;1933&quot;</value>
+            <value>&quot;1934&quot;</value>
+            <value>&quot;1936&quot;</value>
+            <value>&quot;1937&quot;</value>
+            <value>&quot;1938&quot;</value>
+            <value>&quot;1939&quot;</value>
+            <value>&quot;1940&quot;</value>
+            <value>&quot;1941&quot;</value>
+            <value>&quot;1942&quot;</value>
+            <value>&quot;1943&quot;</value>
+            <value>&quot;1944&quot;</value>
+            <value>&quot;1945&quot;</value>
+            <value>&quot;1946&quot;</value>
+            <value>&quot;1947&quot;</value>
+            <value>&quot;1948&quot;</value>
+            <value>&quot;1949&quot;</value>
+            <value>&quot;1950&quot;</value>
+            <value>&quot;1952&quot;</value>
+            <value>&quot;1953&quot;</value>
+            <value>&quot;1954&quot;</value>
+            <value>&quot;1955&quot;</value>
+            <value>&quot;1956&quot;</value>
+            <value>&quot;1957&quot;</value>
+            <value>&quot;1958&quot;</value>
+            <value>&quot;1959&quot;</value>
+            <value>&quot;1960&quot;</value>
+            <value>&quot;1961&quot;</value>
+            <value>&quot;1962&quot;</value>
+            <value>&quot;1963&quot;</value>
+            <value>&quot;1964&quot;</value>
+            <value>&quot;1965&quot;</value>
+            <value>&quot;1966&quot;</value>
+            <value>&quot;1967&quot;</value>
+            <value>&quot;1968&quot;</value>
+            <value>&quot;1969&quot;</value>
+            <value>&quot;1970&quot;</value>
+            <value>&quot;1971&quot;</value>
+            <value>&quot;1972&quot;</value>
+            <value>&quot;1973&quot;</value>
+            <value>&quot;1974&quot;</value>
+            <value>&quot;1975&quot;</value>
+            <value>&quot;1976&quot;</value>
+            <value>&quot;1977&quot;</value>
+            <value>&quot;1978&quot;</value>
+            <value>&quot;1979&quot;</value>
+            <value>&quot;1980&quot;</value>
+            <value>&quot;1981&quot;</value>
+            <value>&quot;1982&quot;</value>
+            <value>&quot;1983&quot;</value>
+            <value>&quot;1984&quot;</value>
+            <value>&quot;1985&quot;</value>
+            <value>&quot;1986&quot;</value>
+            <value>&quot;1987&quot;</value>
+            <value>&quot;1988&quot;</value>
+            <value>&quot;1989&quot;</value>
+            <value>&quot;1989–1999&quot;</value>
+            <value>&quot;1990&quot;</value>
+            <value>&quot;1991&quot;</value>
+            <value>&quot;1992&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='imdb_2501' datatype='table' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+      <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Table Name:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;boxd_250&quot;</bucket>
+            </map>
+            <map to='#f6c700'>
+              <bucket>&quot;imdb_250&quot;</bucket>
+            </map>
+            <map to='#ffffff'>
+              <bucket>&quot;bfi_250&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Year (grupo)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Pre-IMDb&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Post-IMDb&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Post-Letterboxd (group)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Pre-Letterboxd&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Post-Letterboxd&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Genres (grupo) 1]' type='palette'>
+            <map to='#455667'>
+              <bucket>&quot;Outros&quot;</bucket>
+            </map>
+            <map to='#f6c700'>
+              <bucket>&quot;Popular Genres&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Brasil&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Title' />
+        <field-sort-custom-order field='Year' />
+        <field-sort-custom-order field='Runtime' />
+        <field-sort-custom-order field='Rated' />
+        <field-sort-custom-order field='Genres' />
+        <field-sort-custom-order field='Date' />
+        <field-sort-custom-order field='Directors' />
+        <field-sort-custom-order field='Writers' />
+        <field-sort-custom-order field='Actors' />
+        <field-sort-custom-order field='Languages' />
+        <field-sort-custom-order field='Country' />
+        <field-sort-custom-order field='IMDb Rating' />
+        <field-sort-custom-order field='Number of ratings' />
+        <field-sort-custom-order field='Ranking' />
+        <field-sort-custom-order field='Calculation_2293176654616170497' />
+        <field-sort-custom-order field='Table Name' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field='Year (grupo)' />
+        <field-sort-custom-order field='Post-Letterboxd (group)' />
+        <field-sort-custom-order field='United States (group)' />
+        <field-sort-custom-order field='France (group)' />
+        <field-sort-custom-order field='Calculation_2293176654613643264' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='imdb_2501' id='imdb_250_61B4A56179B44D28BFE5888C091548BE'>
+            <properties context=''>
+              <relation all='true' name='imdb_250+' type='union'>
+                <relation connection='mysql.07tnro61r3481y1dvtxgq024b2tu' name='imdb_250' table='[imdb_250]' type='table' />
+                <relation connection='mysql.07tnro61r3481y1dvtxgq024b2tu' name='boxd_250' table='[boxd_250]' type='table' />
+                <relation connection='mysql.07tnro61r3481y1dvtxgq024b2tu' name='bfi_250' table='[bfi_250]' type='table' />
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Destacar 1 (gerado)' name='[Action1_67B16D8E7339457F88ACB6FECEA29346]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Filtro Pós-IMDb' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Nome da tabela' />
+        <param name='target' value='Filtro Pós-IMDb' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Filtro Pós-IMDb'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='imdb_250 (top_250_films)' name='federated.165z5241gt3u1a10dy11x1w3cj9c' />
+          </datasources>
+          <mapsources>
+            <mapsource name='' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.165z5241gt3u1a10dy11x1w3cj9c'>
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+                <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+                <alias key='&quot;imdb_250&quot;' value='IMDb' />
+              </aliases>
+            </column>
+            <column caption='Post-IMDb (group)' datatype='string' name='[Year (grupo)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Year]' new-bin='true'>
+                <bin default-name='false' value='&quot;Post-IMDb&quot;'>
+                  <value>&quot;1993&quot;</value>
+                  <value>&quot;1994&quot;</value>
+                  <value>&quot;1994–1995&quot;</value>
+                  <value>&quot;1995&quot;</value>
+                  <value>&quot;1996&quot;</value>
+                  <value>&quot;1997&quot;</value>
+                  <value>&quot;1998&quot;</value>
+                  <value>&quot;1999&quot;</value>
+                  <value>&quot;2000&quot;</value>
+                  <value>&quot;2001&quot;</value>
+                  <value>&quot;2002&quot;</value>
+                  <value>&quot;2003&quot;</value>
+                  <value>&quot;2004&quot;</value>
+                  <value>&quot;2005&quot;</value>
+                  <value>&quot;2006&quot;</value>
+                  <value>&quot;2006–2012&quot;</value>
+                  <value>&quot;2007&quot;</value>
+                  <value>&quot;2007–&quot;</value>
+                  <value>&quot;2008&quot;</value>
+                  <value>&quot;2009&quot;</value>
+                  <value>&quot;2010&quot;</value>
+                  <value>&quot;2011&quot;</value>
+                  <value>&quot;2011–2019&quot;</value>
+                  <value>&quot;2012&quot;</value>
+                  <value>&quot;2013&quot;</value>
+                  <value>&quot;2014&quot;</value>
+                  <value>&quot;2015&quot;</value>
+                  <value>&quot;2016&quot;</value>
+                  <value>&quot;2017&quot;</value>
+                  <value>&quot;2018&quot;</value>
+                  <value>&quot;2019&quot;</value>
+                  <value>&quot;2020&quot;</value>
+                  <value>&quot;2020–2023&quot;</value>
+                  <value>&quot;2021&quot;</value>
+                  <value>&quot;2022&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Pre-IMDb&quot;'>
+                  <value>&quot;1916&quot;</value>
+                  <value>&quot;1921&quot;</value>
+                  <value>&quot;1922&quot;</value>
+                  <value>&quot;1924&quot;</value>
+                  <value>&quot;1925&quot;</value>
+                  <value>&quot;1926&quot;</value>
+                  <value>&quot;1927&quot;</value>
+                  <value>&quot;1928&quot;</value>
+                  <value>&quot;1929&quot;</value>
+                  <value>&quot;1931&quot;</value>
+                  <value>&quot;1932&quot;</value>
+                  <value>&quot;1933&quot;</value>
+                  <value>&quot;1934&quot;</value>
+                  <value>&quot;1936&quot;</value>
+                  <value>&quot;1937&quot;</value>
+                  <value>&quot;1938&quot;</value>
+                  <value>&quot;1939&quot;</value>
+                  <value>&quot;1940&quot;</value>
+                  <value>&quot;1941&quot;</value>
+                  <value>&quot;1942&quot;</value>
+                  <value>&quot;1943&quot;</value>
+                  <value>&quot;1944&quot;</value>
+                  <value>&quot;1945&quot;</value>
+                  <value>&quot;1946&quot;</value>
+                  <value>&quot;1947&quot;</value>
+                  <value>&quot;1948&quot;</value>
+                  <value>&quot;1949&quot;</value>
+                  <value>&quot;1950&quot;</value>
+                  <value>&quot;1952&quot;</value>
+                  <value>&quot;1953&quot;</value>
+                  <value>&quot;1954&quot;</value>
+                  <value>&quot;1955&quot;</value>
+                  <value>&quot;1956&quot;</value>
+                  <value>&quot;1957&quot;</value>
+                  <value>&quot;1958&quot;</value>
+                  <value>&quot;1959&quot;</value>
+                  <value>&quot;1960&quot;</value>
+                  <value>&quot;1961&quot;</value>
+                  <value>&quot;1962&quot;</value>
+                  <value>&quot;1963&quot;</value>
+                  <value>&quot;1964&quot;</value>
+                  <value>&quot;1965&quot;</value>
+                  <value>&quot;1966&quot;</value>
+                  <value>&quot;1967&quot;</value>
+                  <value>&quot;1968&quot;</value>
+                  <value>&quot;1969&quot;</value>
+                  <value>&quot;1970&quot;</value>
+                  <value>&quot;1971&quot;</value>
+                  <value>&quot;1972&quot;</value>
+                  <value>&quot;1973&quot;</value>
+                  <value>&quot;1974&quot;</value>
+                  <value>&quot;1975&quot;</value>
+                  <value>&quot;1976&quot;</value>
+                  <value>&quot;1977&quot;</value>
+                  <value>&quot;1978&quot;</value>
+                  <value>&quot;1979&quot;</value>
+                  <value>&quot;1980&quot;</value>
+                  <value>&quot;1981&quot;</value>
+                  <value>&quot;1982&quot;</value>
+                  <value>&quot;1983&quot;</value>
+                  <value>&quot;1984&quot;</value>
+                  <value>&quot;1985&quot;</value>
+                  <value>&quot;1986&quot;</value>
+                  <value>&quot;1987&quot;</value>
+                  <value>&quot;1988&quot;</value>
+                  <value>&quot;1989&quot;</value>
+                  <value>&quot;1989–1999&quot;</value>
+                  <value>&quot;1990&quot;</value>
+                  <value>&quot;1991&quot;</value>
+                  <value>&quot;1992&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='imdb_2501' datatype='integer' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='imdb_2501' datatype='table' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Year (grupo)]' direction='DESC' using='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' />
+          <manual-sort column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;bfi_250&quot;</bucket>
+              <bucket>&quot;boxd_250&quot;</bucket>
+              <bucket>&quot;imdb_250&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='tick-color' value='#00000000' />
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#f6c700' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' value='21' />
+            <format attr='background-color' value='#00000000' />
+            <format attr='border-color' value='#f6c700' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='background-color' data-class='total' scope='cols' value='#00000000' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' value='Tableau Bold' />
+            <format attr='font-size' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Year (grupo)]' value='10' />
+            <format attr='font-family' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Year (grupo)]' value='Tableau Bold' />
+            <format attr='font-size' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' value='10' />
+            <format attr='font-family' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='Tableau Book' />
+            <format attr='font-size' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='10' />
+            <format attr='text-format' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='*' />
+            <format attr='text-orientation' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Year (grupo)]' value='-90' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+            <format attr='border-color' value='#f6c700' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='background-color' data-class='total' scope='cols' value='#00000000' />
+            <format attr='background-color' data-class='subtotal' scope='cols' value='#00000000' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='0' />
+            <format attr='band-size' scope='cols' value='0' />
+            <format attr='band-level' scope='cols' value='1' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#f6c700' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-color' scope='rows' value='#f6c700' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#f6c700' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='div-level' scope='cols' value='0' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-size' scope='rows' value='3' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-family' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='Tableau Bold' />
+            <format attr='font-size' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='10' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' />
+              <lod column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]</rows>
+        <cols>([federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk] / [federated.165z5241gt3u1a10dy11x1w3cj9c].[Year (grupo)])</cols>
+      </table>
+      <simple-id uuid='{20AA694E-CB98-426E-8128-B6191E6DA4B8}' />
+    </worksheet>
+    <worksheet name='Filtro Pós-Letterboxd'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='imdb_250 (top_250_films)' name='federated.165z5241gt3u1a10dy11x1w3cj9c' />
+          </datasources>
+          <mapsources>
+            <mapsource name='' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.165z5241gt3u1a10dy11x1w3cj9c'>
+            <column datatype='string' name='[Post-Letterboxd (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Year]' new-bin='true'>
+                <bin default-name='false' value='&quot;Post-Letterboxd&quot;'>
+                  <value>&quot;2011&quot;</value>
+                  <value>&quot;2011–2019&quot;</value>
+                  <value>&quot;2012&quot;</value>
+                  <value>&quot;2013&quot;</value>
+                  <value>&quot;2014&quot;</value>
+                  <value>&quot;2015&quot;</value>
+                  <value>&quot;2016&quot;</value>
+                  <value>&quot;2017&quot;</value>
+                  <value>&quot;2018&quot;</value>
+                  <value>&quot;2019&quot;</value>
+                  <value>&quot;2020&quot;</value>
+                  <value>&quot;2020–2023&quot;</value>
+                  <value>&quot;2021&quot;</value>
+                  <value>&quot;2022&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Pre-Letterboxd&quot;'>
+                  <value>&quot;1916&quot;</value>
+                  <value>&quot;1921&quot;</value>
+                  <value>&quot;1922&quot;</value>
+                  <value>&quot;1924&quot;</value>
+                  <value>&quot;1925&quot;</value>
+                  <value>&quot;1926&quot;</value>
+                  <value>&quot;1927&quot;</value>
+                  <value>&quot;1928&quot;</value>
+                  <value>&quot;1929&quot;</value>
+                  <value>&quot;1931&quot;</value>
+                  <value>&quot;1932&quot;</value>
+                  <value>&quot;1933&quot;</value>
+                  <value>&quot;1934&quot;</value>
+                  <value>&quot;1936&quot;</value>
+                  <value>&quot;1937&quot;</value>
+                  <value>&quot;1938&quot;</value>
+                  <value>&quot;1939&quot;</value>
+                  <value>&quot;1940&quot;</value>
+                  <value>&quot;1941&quot;</value>
+                  <value>&quot;1942&quot;</value>
+                  <value>&quot;1943&quot;</value>
+                  <value>&quot;1944&quot;</value>
+                  <value>&quot;1945&quot;</value>
+                  <value>&quot;1946&quot;</value>
+                  <value>&quot;1947&quot;</value>
+                  <value>&quot;1948&quot;</value>
+                  <value>&quot;1949&quot;</value>
+                  <value>&quot;1950&quot;</value>
+                  <value>&quot;1952&quot;</value>
+                  <value>&quot;1953&quot;</value>
+                  <value>&quot;1954&quot;</value>
+                  <value>&quot;1955&quot;</value>
+                  <value>&quot;1956&quot;</value>
+                  <value>&quot;1957&quot;</value>
+                  <value>&quot;1958&quot;</value>
+                  <value>&quot;1959&quot;</value>
+                  <value>&quot;1960&quot;</value>
+                  <value>&quot;1961&quot;</value>
+                  <value>&quot;1962&quot;</value>
+                  <value>&quot;1963&quot;</value>
+                  <value>&quot;1964&quot;</value>
+                  <value>&quot;1965&quot;</value>
+                  <value>&quot;1966&quot;</value>
+                  <value>&quot;1967&quot;</value>
+                  <value>&quot;1968&quot;</value>
+                  <value>&quot;1969&quot;</value>
+                  <value>&quot;1970&quot;</value>
+                  <value>&quot;1971&quot;</value>
+                  <value>&quot;1972&quot;</value>
+                  <value>&quot;1973&quot;</value>
+                  <value>&quot;1974&quot;</value>
+                  <value>&quot;1975&quot;</value>
+                  <value>&quot;1976&quot;</value>
+                  <value>&quot;1977&quot;</value>
+                  <value>&quot;1978&quot;</value>
+                  <value>&quot;1979&quot;</value>
+                  <value>&quot;1980&quot;</value>
+                  <value>&quot;1981&quot;</value>
+                  <value>&quot;1982&quot;</value>
+                  <value>&quot;1983&quot;</value>
+                  <value>&quot;1984&quot;</value>
+                  <value>&quot;1985&quot;</value>
+                  <value>&quot;1986&quot;</value>
+                  <value>&quot;1987&quot;</value>
+                  <value>&quot;1988&quot;</value>
+                  <value>&quot;1989&quot;</value>
+                  <value>&quot;1989–1999&quot;</value>
+                  <value>&quot;1990&quot;</value>
+                  <value>&quot;1991&quot;</value>
+                  <value>&quot;1992&quot;</value>
+                  <value>&quot;1993&quot;</value>
+                  <value>&quot;1994&quot;</value>
+                  <value>&quot;1994–1995&quot;</value>
+                  <value>&quot;1995&quot;</value>
+                  <value>&quot;1996&quot;</value>
+                  <value>&quot;1997&quot;</value>
+                  <value>&quot;1998&quot;</value>
+                  <value>&quot;1999&quot;</value>
+                  <value>&quot;2000&quot;</value>
+                  <value>&quot;2001&quot;</value>
+                  <value>&quot;2002&quot;</value>
+                  <value>&quot;2003&quot;</value>
+                  <value>&quot;2004&quot;</value>
+                  <value>&quot;2005&quot;</value>
+                  <value>&quot;2006&quot;</value>
+                  <value>&quot;2006–2012&quot;</value>
+                  <value>&quot;2007&quot;</value>
+                  <value>&quot;2007–&quot;</value>
+                  <value>&quot;2008&quot;</value>
+                  <value>&quot;2009&quot;</value>
+                  <value>&quot;2010&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+                <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+                <alias key='&quot;imdb_250&quot;' value='IMDb' />
+              </aliases>
+            </column>
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='imdb_2501' datatype='integer' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='imdb_2501' datatype='table' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Post-Letterboxd (group)]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Pre-Letterboxd&quot;</bucket>
+              <bucket>&quot;Post-Letterboxd&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;bfi_250&quot;</bucket>
+              <bucket>&quot;boxd_250&quot;</bucket>
+              <bucket>&quot;imdb_250&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='0' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='tick-color' scope='rows' value='#00000000' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-size' value='10' />
+            <format attr='color' value='#b4b4b4' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Post-Letterboxd (group)]' value='0' />
+            <format attr='font-family' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' value='Tableau Bold' />
+            <format attr='font-size' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' value='10' />
+            <format attr='color' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' value='#b4b4b4' />
+            <format attr='font-family' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='Tableau Bold' />
+            <format attr='font-size' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='10' />
+            <format attr='color' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='#c0c0c0' />
+            <format attr='font-family' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Post-Letterboxd (group)]' value='Tableau Bold' />
+            <format attr='font-size' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Post-Letterboxd (group)]' value='10' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='cols' value='0' />
+            <format attr='band-level' scope='cols' value='1' />
+            <format attr='band-size' scope='rows' value='0' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='div-level' scope='cols' value='0' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]</rows>
+        <cols>([federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk] / [federated.165z5241gt3u1a10dy11x1w3cj9c].[Post-Letterboxd (group)])</cols>
+      </table>
+      <simple-id uuid='{53A2268C-310F-4F12-A446-AE90C0A1C86E}' />
+    </worksheet>
+    <worksheet name='Gêneros mais populares'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='imdb_250 (top_250_films)' name='federated.165z5241gt3u1a10dy11x1w3cj9c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.165z5241gt3u1a10dy11x1w3cj9c'>
+            <column caption='Popular Genres (grupo)' datatype='string' name='[Genres (grupo) 1]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Genres]' default='&quot;Outros&quot;' new-bin='true'>
+                <bin default-name='false' value='&quot;Popular Genres&quot;'>
+                  <value>&quot;Action, Adventure&quot;</value>
+                  <value>&quot;Action, Adventure, Biography&quot;</value>
+                  <value>&quot;Action, Adventure, Comedy&quot;</value>
+                  <value>&quot;Action, Adventure, Drama&quot;</value>
+                  <value>&quot;Action, Adventure, Fantasy&quot;</value>
+                  <value>&quot;Action, Adventure, Mystery&quot;</value>
+                  <value>&quot;Action, Adventure, Sci-Fi&quot;</value>
+                  <value>&quot;Action, Adventure, Western&quot;</value>
+                  <value>&quot;Action, Biography, Drama&quot;</value>
+                  <value>&quot;Action, Comedy&quot;</value>
+                  <value>&quot;Action, Comedy, Crime&quot;</value>
+                  <value>&quot;Action, Comedy, Drama&quot;</value>
+                  <value>&quot;Action, Comedy, Romance&quot;</value>
+                  <value>&quot;Action, Crime, Drama&quot;</value>
+                  <value>&quot;Action, Drama&quot;</value>
+                  <value>&quot;Action, Drama, Mystery&quot;</value>
+                  <value>&quot;Action, Drama, Sci-Fi&quot;</value>
+                  <value>&quot;Action, Drama, Sport&quot;</value>
+                  <value>&quot;Action, Drama, Thriller&quot;</value>
+                  <value>&quot;Action, Drama, War&quot;</value>
+                  <value>&quot;Action, Sci-Fi&quot;</value>
+                  <value>&quot;Action, Thriller&quot;</value>
+                  <value>&quot;Adventure, Biography, Drama&quot;</value>
+                  <value>&quot;Adventure, Comedy, Crime&quot;</value>
+                  <value>&quot;Adventure, Comedy, Drama&quot;</value>
+                  <value>&quot;Adventure, Comedy, Family&quot;</value>
+                  <value>&quot;Adventure, Comedy, Fantasy&quot;</value>
+                  <value>&quot;Adventure, Comedy, Sci-Fi&quot;</value>
+                  <value>&quot;Adventure, Drama&quot;</value>
+                  <value>&quot;Adventure, Drama, History&quot;</value>
+                  <value>&quot;Adventure, Drama, Romance&quot;</value>
+                  <value>&quot;Adventure, Drama, Sci-Fi&quot;</value>
+                  <value>&quot;Adventure, Drama, Thriller&quot;</value>
+                  <value>&quot;Adventure, Drama, War&quot;</value>
+                  <value>&quot;Adventure, Drama, Western&quot;</value>
+                  <value>&quot;Adventure, Family, Fantasy&quot;</value>
+                  <value>&quot;Adventure, Sci-Fi&quot;</value>
+                  <value>&quot;Adventure, Thriller&quot;</value>
+                  <value>&quot;Adventure, Western&quot;</value>
+                  <value>&quot;Animation, Action, Adventure&quot;</value>
+                  <value>&quot;Animation, Action, Drama&quot;</value>
+                  <value>&quot;Animation, Adventure, Comedy&quot;</value>
+                  <value>&quot;Animation, Adventure, Drama&quot;</value>
+                  <value>&quot;Animation, Adventure, Family&quot;</value>
+                  <value>&quot;Animation, Comedy, Drama&quot;</value>
+                  <value>&quot;Animation, Comedy, Family&quot;</value>
+                  <value>&quot;Animation, Crime, Drama&quot;</value>
+                  <value>&quot;Animation, Drama, Family&quot;</value>
+                  <value>&quot;Animation, Drama, Fantasy&quot;</value>
+                  <value>&quot;Animation, Drama, War&quot;</value>
+                  <value>&quot;Comedy&quot;</value>
+                  <value>&quot;Comedy, Crime&quot;</value>
+                  <value>&quot;Comedy, Crime, Drama&quot;</value>
+                  <value>&quot;Comedy, Crime, Romance&quot;</value>
+                  <value>&quot;Comedy, Drama&quot;</value>
+                  <value>&quot;Comedy, Drama, Family&quot;</value>
+                  <value>&quot;Comedy, Drama, Fantasy&quot;</value>
+                  <value>&quot;Comedy, Drama, Music&quot;</value>
+                  <value>&quot;Comedy, Drama, Musical&quot;</value>
+                  <value>&quot;Comedy, Drama, Mystery&quot;</value>
+                  <value>&quot;Comedy, Drama, Romance&quot;</value>
+                  <value>&quot;Comedy, Drama, Sci-Fi&quot;</value>
+                  <value>&quot;Comedy, Drama, Thriller&quot;</value>
+                  <value>&quot;Comedy, Drama, War&quot;</value>
+                  <value>&quot;Comedy, Fantasy&quot;</value>
+                  <value>&quot;Comedy, Music, Romance&quot;</value>
+                  <value>&quot;Comedy, Musical&quot;</value>
+                  <value>&quot;Comedy, Musical, Romance&quot;</value>
+                  <value>&quot;Comedy, Romance&quot;</value>
+                  <value>&quot;Comedy, Romance, War&quot;</value>
+                  <value>&quot;Comedy, War&quot;</value>
+                  <value>&quot;Crime, Drama&quot;</value>
+                  <value>&quot;Crime, Drama, Fantasy&quot;</value>
+                  <value>&quot;Crime, Drama, Film-Noir&quot;</value>
+                  <value>&quot;Crime, Drama, Horror&quot;</value>
+                  <value>&quot;Crime, Drama, Music&quot;</value>
+                  <value>&quot;Crime, Drama, Mystery&quot;</value>
+                  <value>&quot;Crime, Drama, Romance&quot;</value>
+                  <value>&quot;Crime, Drama, Sport&quot;</value>
+                  <value>&quot;Crime, Drama, Thriller&quot;</value>
+                  <value>&quot;Crime, Mystery, Thriller&quot;</value>
+                  <value>&quot;Crime, Sci-Fi&quot;</value>
+                  <value>&quot;Crime, Thriller&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Genres (grupo)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Genres]' new-bin='true'>
+                <bin default-name='false' value='&quot;Action&quot;'>
+                  <value>&quot;Action, Adventure&quot;</value>
+                  <value>&quot;Action, Adventure, Biography&quot;</value>
+                  <value>&quot;Action, Adventure, Comedy&quot;</value>
+                  <value>&quot;Action, Adventure, Drama&quot;</value>
+                  <value>&quot;Action, Adventure, Fantasy&quot;</value>
+                  <value>&quot;Action, Adventure, Mystery&quot;</value>
+                  <value>&quot;Action, Adventure, Sci-Fi&quot;</value>
+                  <value>&quot;Action, Adventure, Western&quot;</value>
+                  <value>&quot;Action, Biography, Drama&quot;</value>
+                  <value>&quot;Action, Comedy&quot;</value>
+                  <value>&quot;Action, Comedy, Crime&quot;</value>
+                  <value>&quot;Action, Comedy, Drama&quot;</value>
+                  <value>&quot;Action, Comedy, Romance&quot;</value>
+                  <value>&quot;Action, Crime, Drama&quot;</value>
+                  <value>&quot;Action, Drama&quot;</value>
+                  <value>&quot;Action, Drama, Mystery&quot;</value>
+                  <value>&quot;Action, Drama, Sci-Fi&quot;</value>
+                  <value>&quot;Action, Drama, Sport&quot;</value>
+                  <value>&quot;Action, Drama, Thriller&quot;</value>
+                  <value>&quot;Action, Drama, War&quot;</value>
+                  <value>&quot;Action, Sci-Fi&quot;</value>
+                  <value>&quot;Action, Thriller&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Adventure&quot;'>
+                  <value>&quot;Adventure, Biography, Drama&quot;</value>
+                  <value>&quot;Adventure, Comedy, Crime&quot;</value>
+                  <value>&quot;Adventure, Comedy, Drama&quot;</value>
+                  <value>&quot;Adventure, Comedy, Family&quot;</value>
+                  <value>&quot;Adventure, Comedy, Fantasy&quot;</value>
+                  <value>&quot;Adventure, Comedy, Sci-Fi&quot;</value>
+                  <value>&quot;Adventure, Drama&quot;</value>
+                  <value>&quot;Adventure, Drama, History&quot;</value>
+                  <value>&quot;Adventure, Drama, Romance&quot;</value>
+                  <value>&quot;Adventure, Drama, Sci-Fi&quot;</value>
+                  <value>&quot;Adventure, Drama, Thriller&quot;</value>
+                  <value>&quot;Adventure, Drama, War&quot;</value>
+                  <value>&quot;Adventure, Drama, Western&quot;</value>
+                  <value>&quot;Adventure, Family, Fantasy&quot;</value>
+                  <value>&quot;Adventure, Sci-Fi&quot;</value>
+                  <value>&quot;Adventure, Thriller&quot;</value>
+                  <value>&quot;Adventure, Western&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Animation&quot;'>
+                  <value>&quot;Animation, Action, Adventure&quot;</value>
+                  <value>&quot;Animation, Action, Drama&quot;</value>
+                  <value>&quot;Animation, Adventure, Comedy&quot;</value>
+                  <value>&quot;Animation, Adventure, Drama&quot;</value>
+                  <value>&quot;Animation, Adventure, Family&quot;</value>
+                  <value>&quot;Animation, Comedy, Drama&quot;</value>
+                  <value>&quot;Animation, Comedy, Family&quot;</value>
+                  <value>&quot;Animation, Crime, Drama&quot;</value>
+                  <value>&quot;Animation, Drama, Family&quot;</value>
+                  <value>&quot;Animation, Drama, Fantasy&quot;</value>
+                  <value>&quot;Animation, Drama, War&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Biography&quot;'>
+                  <value>&quot;Biography, Comedy, Crime&quot;</value>
+                  <value>&quot;Biography, Comedy, Drama&quot;</value>
+                  <value>&quot;Biography, Crime, Drama&quot;</value>
+                  <value>&quot;Biography, Drama&quot;</value>
+                  <value>&quot;Biography, Drama, Family&quot;</value>
+                  <value>&quot;Biography, Drama, Fantasy&quot;</value>
+                  <value>&quot;Biography, Drama, History&quot;</value>
+                  <value>&quot;Biography, Drama, Music&quot;</value>
+                  <value>&quot;Biography, Drama, Sport&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Comedy&quot;'>
+                  <value>&quot;Comedy&quot;</value>
+                  <value>&quot;Comedy, Crime&quot;</value>
+                  <value>&quot;Comedy, Crime, Drama&quot;</value>
+                  <value>&quot;Comedy, Crime, Romance&quot;</value>
+                  <value>&quot;Comedy, Drama&quot;</value>
+                  <value>&quot;Comedy, Drama, Family&quot;</value>
+                  <value>&quot;Comedy, Drama, Fantasy&quot;</value>
+                  <value>&quot;Comedy, Drama, Music&quot;</value>
+                  <value>&quot;Comedy, Drama, Musical&quot;</value>
+                  <value>&quot;Comedy, Drama, Mystery&quot;</value>
+                  <value>&quot;Comedy, Drama, Romance&quot;</value>
+                  <value>&quot;Comedy, Drama, Sci-Fi&quot;</value>
+                  <value>&quot;Comedy, Drama, Thriller&quot;</value>
+                  <value>&quot;Comedy, Drama, War&quot;</value>
+                  <value>&quot;Comedy, Fantasy&quot;</value>
+                  <value>&quot;Comedy, Music, Romance&quot;</value>
+                  <value>&quot;Comedy, Musical&quot;</value>
+                  <value>&quot;Comedy, Musical, Romance&quot;</value>
+                  <value>&quot;Comedy, Romance&quot;</value>
+                  <value>&quot;Comedy, Romance, War&quot;</value>
+                  <value>&quot;Comedy, War&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Crime&quot;'>
+                  <value>&quot;Crime, Drama&quot;</value>
+                  <value>&quot;Crime, Drama, Fantasy&quot;</value>
+                  <value>&quot;Crime, Drama, Film-Noir&quot;</value>
+                  <value>&quot;Crime, Drama, Horror&quot;</value>
+                  <value>&quot;Crime, Drama, Music&quot;</value>
+                  <value>&quot;Crime, Drama, Mystery&quot;</value>
+                  <value>&quot;Crime, Drama, Romance&quot;</value>
+                  <value>&quot;Crime, Drama, Sport&quot;</value>
+                  <value>&quot;Crime, Drama, Thriller&quot;</value>
+                  <value>&quot;Crime, Mystery, Thriller&quot;</value>
+                  <value>&quot;Crime, Sci-Fi&quot;</value>
+                  <value>&quot;Crime, Thriller&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Documentary&quot;'>
+                  <value>&quot;Documentary&quot;</value>
+                  <value>&quot;Documentary, Biography&quot;</value>
+                  <value>&quot;Documentary, Drama&quot;</value>
+                  <value>&quot;Documentary, History&quot;</value>
+                  <value>&quot;Documentary, History, War&quot;</value>
+                  <value>&quot;Documentary, Music&quot;</value>
+                  <value>&quot;Documentary, Short&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Drama&quot;'>
+                  <value>&quot;Drama&quot;</value>
+                  <value>&quot;Drama, Comedy&quot;</value>
+                  <value>&quot;Drama, Crime&quot;</value>
+                  <value>&quot;Drama, Family&quot;</value>
+                  <value>&quot;Drama, Family, Fantasy&quot;</value>
+                  <value>&quot;Drama, Family, Sport&quot;</value>
+                  <value>&quot;Drama, Fantasy&quot;</value>
+                  <value>&quot;Drama, Fantasy, Mystery&quot;</value>
+                  <value>&quot;Drama, Fantasy, Romance&quot;</value>
+                  <value>&quot;Drama, Fantasy, War&quot;</value>
+                  <value>&quot;Drama, Film-Noir&quot;</value>
+                  <value>&quot;Drama, Film-Noir, Mystery&quot;</value>
+                  <value>&quot;Drama, Film-Noir, Romance&quot;</value>
+                  <value>&quot;Drama, History&quot;</value>
+                  <value>&quot;Drama, History, Romance&quot;</value>
+                  <value>&quot;Drama, History, Thriller&quot;</value>
+                  <value>&quot;Drama, History, War&quot;</value>
+                  <value>&quot;Drama, Horror&quot;</value>
+                  <value>&quot;Drama, Horror, Mystery&quot;</value>
+                  <value>&quot;Drama, Music&quot;</value>
+                  <value>&quot;Drama, Music, Musical&quot;</value>
+                  <value>&quot;Drama, Music, Romance&quot;</value>
+                  <value>&quot;Drama, Musical&quot;</value>
+                  <value>&quot;Drama, Musical, Romance&quot;</value>
+                  <value>&quot;Drama, Mystery&quot;</value>
+                  <value>&quot;Drama, Mystery, Romance&quot;</value>
+                  <value>&quot;Drama, Mystery, Sci-Fi&quot;</value>
+                  <value>&quot;Drama, Mystery, Thriller&quot;</value>
+                  <value>&quot;Drama, Mystery, War&quot;</value>
+                  <value>&quot;Drama, Romance&quot;</value>
+                  <value>&quot;Drama, Romance, Sci-Fi&quot;</value>
+                  <value>&quot;Drama, Romance, Thriller&quot;</value>
+                  <value>&quot;Drama, Romance, War&quot;</value>
+                  <value>&quot;Drama, Romance, Western&quot;</value>
+                  <value>&quot;Drama, Sci-Fi&quot;</value>
+                  <value>&quot;Drama, Sport&quot;</value>
+                  <value>&quot;Drama, Thriller&quot;</value>
+                  <value>&quot;Drama, Thriller, War&quot;</value>
+                  <value>&quot;Drama, Thriller, Western&quot;</value>
+                  <value>&quot;Drama, War&quot;</value>
+                  <value>&quot;Drama, Western&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Fantasy&quot;'>
+                  <value>&quot;Fantasy&quot;</value>
+                  <value>&quot;Fantasy, Horror&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Horror&quot;'>
+                  <value>&quot;Horror&quot;</value>
+                  <value>&quot;Horror, Mystery, Sci-Fi&quot;</value>
+                  <value>&quot;Horror, Mystery, Thriller&quot;</value>
+                  <value>&quot;Horror, Sci-Fi&quot;</value>
+                  <value>&quot;Horror, Sci-Fi, Thriller&quot;</value>
+                  <value>&quot;Horror, Thriller&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Mystery&quot;'>
+                  <value>&quot;Mystery, Romance, Thriller&quot;</value>
+                  <value>&quot;Mystery, Thriller&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Noir&quot;'>
+                  <value>&quot;Film-Noir, Mystery, Thriller&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Others&quot;'>
+                  <value>&quot;N/A&quot;</value>
+                  <value>&quot;Short&quot;</value>
+                  <value>&quot;Short, Drama&quot;</value>
+                  <value>&quot;Short, Drama, Romance&quot;</value>
+                  <value>&quot;Short, Fantasy, Horror&quot;</value>
+                  <value>&quot;Short, Fantasy, Mystery&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Genres]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+                <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+                <alias key='&quot;imdb_250&quot;' value='IMDb' />
+              </aliases>
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='imdb_2501' datatype='integer' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='imdb_2501' datatype='table' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]'>
+            <groupfilter function='member' level='[none:Table Name:nk]' member='&quot;bfi_250&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='font-size' value='9' />
+            <format attr='color' value='#f6c700' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='font-size' value='10' />
+            <format attr='font-weight' value='normal' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Genres (grupo) 1]' />
+              <size column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' />
+              <text column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Genres (grupo)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5F73CFBB-2D67-43E1-8C22-EDE63C26E3C6}' />
+    </worksheet>
+    <worksheet name='Média de número de avaliações'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='imdb_250 (top_250_films)' name='federated.165z5241gt3u1a10dy11x1w3cj9c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.165z5241gt3u1a10dy11x1w3cj9c'>
+            <column datatype='string' name='[Nome da tabela (grupo)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Table Name]' new-bin='true'>
+                <bin default-name='false' value='&quot;BFI Sight &amp; Sound&quot;'>
+                  <value>&quot;bfi_250&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;IMDb&quot;'>
+                  <value>&quot;imdb_250&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Letterboxd&quot;'>
+                  <value>&quot;boxd_250&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' datatype-customized='true' name='[Number of ratings]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+                <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+                <alias key='&quot;imdb_250&quot;' value='IMDb' />
+              </aliases>
+            </column>
+            <column-instance column='[Number of ratings]' derivation='Avg' name='[avg:Number of ratings:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[avg:Number of ratings:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f1ecd9</color>
+                <color>#f2e8c1</color>
+                <color>#f2e4a9</color>
+                <color>#f3e091</color>
+                <color>#f3dc79</color>
+                <color>#f4d861</color>
+                <color>#f4d349</color>
+                <color>#f5cf30</color>
+                <color>#f5cb18</color>
+                <color>#f6c700</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-size' value='12' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[avg:Number of ratings:qk]' />
+              <color column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[avg:Number of ratings:qk]' />
+              <text column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Nome da tabela (grupo)]' />
+              <text column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[avg:Number of ratings:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B514D363-F4BC-4AC1-8824-804380C4D071}' />
+    </worksheet>
+    <worksheet name='Planilha 10'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='imdb_250 (top_250_films)' name='federated.165z5241gt3u1a10dy11x1w3cj9c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.165z5241gt3u1a10dy11x1w3cj9c'>
+            <column datatype='string' name='[Genres]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+                <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+                <alias key='&quot;imdb_250&quot;' value='IMDb' />
+              </aliases>
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='imdb_2501' datatype='integer' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='imdb_2501' datatype='table' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[Genres]' derivation='None' name='[none:Genres:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Genres:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' shelf='rows'>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' member-value='&quot;bfi_250&quot;' />
+              </sort-filter-info>
+            </shelf-sort-v2>
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' />
+              <text column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Genres:nk]</rows>
+        <cols>[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]</cols>
+      </table>
+      <simple-id uuid='{8B1E329C-8F79-4764-8389-202DD937494F}' />
+    </worksheet>
+    <worksheet name='Planilha 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='imdb_250 (top_250_films)' name='federated.165z5241gt3u1a10dy11x1w3cj9c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.165z5241gt3u1a10dy11x1w3cj9c'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+                <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+                <alias key='&quot;imdb_250&quot;' value='IMDb' />
+              </aliases>
+            </column>
+            <column datatype='string' name='[United States (group)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <calculation class='categorical-bin' column='[Country]' default='&quot;Others&quot;' new-bin='true'>
+                <bin default-name='false' value='&quot;United States&quot;'>
+                  <value>&quot;Argentina, Brazil, Spain, Dominican Republic, France, Netherlands, Mexico, Switzerland, United States, Portugal, Lebanon&quot;</value>
+                  <value>&quot;Australia, United States, United Kingdom, China&quot;</value>
+                  <value>&quot;Canada, United States&quot;</value>
+                  <value>&quot;France, Germany, Italy, Canada, United States, United Kingdom, Hungary, Spain, Czech Republic&quot;</value>
+                  <value>&quot;Germany, United States&quot;</value>
+                  <value>&quot;India, United States&quot;</value>
+                  <value>&quot;Ireland, Canada, United Kingdom, United States&quot;</value>
+                  <value>&quot;Italy, France, United States, Brazil&quot;</value>
+                  <value>&quot;Spain, United Kingdom, United States&quot;</value>
+                  <value>&quot;United Kingdom, Germany, United States, France&quot;</value>
+                  <value>&quot;United Kingdom, South Africa, Italy, United States&quot;</value>
+                  <value>&quot;United Kingdom, United States&quot;</value>
+                  <value>&quot;United Kingdom, United States, India, Spain&quot;</value>
+                  <value>&quot;United States&quot;</value>
+                  <value>&quot;United States, Australia&quot;</value>
+                  <value>&quot;United States, Austria&quot;</value>
+                  <value>&quot;United States, Canada&quot;</value>
+                  <value>&quot;United States, China&quot;</value>
+                  <value>&quot;United States, Denmark&quot;</value>
+                  <value>&quot;United States, France&quot;</value>
+                  <value>&quot;United States, France, Italy&quot;</value>
+                  <value>&quot;United States, Germany&quot;</value>
+                  <value>&quot;United States, Germany, Australia&quot;</value>
+                  <value>&quot;United States, Hong Kong&quot;</value>
+                  <value>&quot;United States, India&quot;</value>
+                  <value>&quot;United States, Japan&quot;</value>
+                  <value>&quot;United States, United Kingdom&quot;</value>
+                  <value>&quot;United States, United Kingdom, Canada&quot;</value>
+                  <value>&quot;United States, United Kingdom, Germany&quot;</value>
+                  <value>&quot;United States, United Kingdom, Japan&quot;</value>
+                  <value>&quot;United States, United Kingdom, Malta, Morocco&quot;</value>
+                  <value>&quot;West Germany, France, United Kingdom, United States&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='imdb_2501' datatype='integer' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='imdb_2501' datatype='table' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Country:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Country:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Argentina&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Argentina, Spain&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Australia&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Austria&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Canada&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Canada, Germany&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;China&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;China, Hong Kong&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;China, Netherlands&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Cuba&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Cuba, Soviet Union&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Czechoslovakia&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Denmark&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Denmark, Sweden&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Germany&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Germany, Austria, Italy&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Hong Kong&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Hong Kong, China&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Hong Kong, South Korea, Japan&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Hungary, Germany, Switzerland&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Iran&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Ireland, United Kingdom&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Italy&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Italy, Algeria&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Italy, Canada&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Italy, Spain, West Germany&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Japan&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Mexico&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Mexico, Netherlands&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Mexico, Spain&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;N/A&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Philippines&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Portugal&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Portugal, Germany, Switzerland&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Senegal&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;South Korea&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Soviet Union&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Soviet Union, Japan&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Spain&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Sweden&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Taiwan&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Taiwan, Hong Kong&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Taiwan, Japan&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Taiwan, South Korea&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Turkey&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Turkey, Bosnia and Herzegovina&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;UK&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;United Kingdom&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;United Kingdom, Canada&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;United Kingdom, Italy&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;United Kingdom, Switzerland&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;United Kingdom, West Germany&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;West Germany&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;West Germany, Mexico&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;West Germany, United Kingdom&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='&quot;Yugoslavia, Italy, United Kingdom&quot;' />
+                <groupfilter function='member' level='[none:Country:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;bfi_250&quot;</bucket>
+              <bucket>&quot;boxd_250&quot;</bucket>
+              <bucket>&quot;imdb_250&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='0' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-family' data-class='subtotal' scope='cols' value='Tableau Bold' />
+            <format attr='font-size' data-class='subtotal' scope='cols' value='10' />
+            <format attr='font-family' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='Tableau Bold' />
+            <format attr='font-size' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='10' />
+            <format attr='color' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='#f6c700' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-size' value='10' />
+            <format attr='color' value='#f6c700' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' scope='cols' value='Tableau Bold' />
+            <format attr='font-size' scope='cols' value='10' />
+            <format attr='font-family' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='Tableau Bold' />
+            <format attr='font-size' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='10' />
+            <format attr='color' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' value='#f6c700' />
+            <format attr='font-family' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' value='Tableau Bold' />
+            <format attr='font-size' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' value='10' />
+            <format attr='color' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' value='#f6c700' />
+            <format attr='font-family' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[United States (group)]' value='Tableau Bold' />
+            <format attr='font-size' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[United States (group)]' value='10' />
+            <format attr='color' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[United States (group)]' value='#f6c700' />
+            <format attr='text-orientation' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[United States (group)]' value='0' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='0' />
+            <format attr='band-level' scope='cols' value='1' />
+            <format attr='band-size' scope='cols' value='0' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='div-level' scope='cols' value='0' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]</rows>
+        <cols>([federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk] / [federated.165z5241gt3u1a10dy11x1w3cj9c].[United States (group)])</cols>
+      </table>
+      <simple-id uuid='{BE883E10-F844-40DA-9CA6-E8E92E7A5ED6}' />
+    </worksheet>
+    <worksheet name='Planilha 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='imdb_250 (top_250_films)' name='federated.165z5241gt3u1a10dy11x1w3cj9c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.165z5241gt3u1a10dy11x1w3cj9c'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='string' name='[France (group)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <calculation class='categorical-bin' column='[Country]' default='&quot;Outros&quot;' new-bin='true'>
+                <bin default-name='false' value='&quot;France&quot;'>
+                  <value>&quot;Angola, France&quot;</value>
+                  <value>&quot;Argentina, Brazil, Spain, Dominican Republic, France, Netherlands, Mexico, Switzerland, United States, Portugal, Lebanon&quot;</value>
+                  <value>&quot;Argentina, France, Italy, Spain&quot;</value>
+                  <value>&quot;Argentina, France, Spain, Japan&quot;</value>
+                  <value>&quot;Argentina, Spain, France, United Kingdom&quot;</value>
+                  <value>&quot;Australia, France&quot;</value>
+                  <value>&quot;Belgium, France&quot;</value>
+                  <value>&quot;Belgium, France, West Germany&quot;</value>
+                  <value>&quot;Brazil, France&quot;</value>
+                  <value>&quot;Brazil, France, Germany&quot;</value>
+                  <value>&quot;Canada, France&quot;</value>
+                  <value>&quot;Denmark, Sweden, France, Germany&quot;</value>
+                  <value>&quot;France&quot;</value>
+                  <value>&quot;France, Algeria&quot;</value>
+                  <value>&quot;France, Algeria, Mauritania&quot;</value>
+                  <value>&quot;France, Germany&quot;</value>
+                  <value>&quot;France, Germany, Chile, Spain&quot;</value>
+                  <value>&quot;France, Germany, Italy, Canada, United States, United Kingdom, Hungary, Spain, Czech Republic&quot;</value>
+                  <value>&quot;France, Italy&quot;</value>
+                  <value>&quot;France, Italy, Greece, Germany&quot;</value>
+                  <value>&quot;France, Japan&quot;</value>
+                  <value>&quot;France, Poland, Germany, United Kingdom&quot;</value>
+                  <value>&quot;France, Sweden&quot;</value>
+                  <value>&quot;France, Switzerland&quot;</value>
+                  <value>&quot;France, Switzerland, Poland&quot;</value>
+                  <value>&quot;France, United States&quot;</value>
+                  <value>&quot;France, West Germany&quot;</value>
+                  <value>&quot;Germany, France&quot;</value>
+                  <value>&quot;Greece, France, Italy&quot;</value>
+                  <value>&quot;Hong Kong, France&quot;</value>
+                  <value>&quot;Hungary, Italy, Germany, France&quot;</value>
+                  <value>&quot;Italy, France&quot;</value>
+                  <value>&quot;Italy, France, United States, Brazil&quot;</value>
+                  <value>&quot;Italy, France, West Germany&quot;</value>
+                  <value>&quot;Japan, France&quot;</value>
+                  <value>&quot;Lebanon, France, Cyprus, Qatar, United Kingdom&quot;</value>
+                  <value>&quot;Senegal, France&quot;</value>
+                  <value>&quot;Spain, France&quot;</value>
+                  <value>&quot;Sweden, France&quot;</value>
+                  <value>&quot;Sweden, France, United Kingdom&quot;</value>
+                  <value>&quot;Sweden, France, West Germany&quot;</value>
+                  <value>&quot;Thailand, France, Austria&quot;</value>
+                  <value>&quot;Thailand, France, Germany, Italy&quot;</value>
+                  <value>&quot;Turkey, France, Germany, Netherlands, Greece, Croatia&quot;</value>
+                  <value>&quot;United Kingdom, France, United States, China, Canada&quot;</value>
+                  <value>&quot;United States, France&quot;</value>
+                  <value>&quot;United States, France, Italy&quot;</value>
+                  <value>&quot;West Germany, France&quot;</value>
+                  <value>&quot;West Germany, France, United Kingdom, United States&quot;</value>
+                  <value>&quot;West Germany, Italy, France, United Kingdom&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+                <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+                <alias key='&quot;imdb_250&quot;' value='IMDb' />
+              </aliases>
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='imdb_2501' datatype='integer' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='imdb_2501' datatype='table' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[France (group)]'>
+            <groupfilter function='level-members' level='[France (group)]' />
+          </filter>
+          <slices>
+            <column>[federated.165z5241gt3u1a10dy11x1w3cj9c].[France (group)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]</rows>
+        <cols>([federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk] / [federated.165z5241gt3u1a10dy11x1w3cj9c].[France (group)])</cols>
+      </table>
+      <simple-id uuid='{8C9A208A-9A56-497F-8818-4E12C1AEE2CE}' />
+    </worksheet>
+    <worksheet name='Planilha 6'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='imdb_250 (top_250_films)' name='federated.165z5241gt3u1a10dy11x1w3cj9c' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.165z5241gt3u1a10dy11x1w3cj9c'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+                <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+                <alias key='&quot;imdb_250&quot;' value='IMDb' />
+              </aliases>
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='imdb_2501' datatype='integer' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='imdb_2501' datatype='table' name='[__tableau_internal_object_id__].[imdb_250_61B4A56179B44D28BFE5888C091548BE]' role='measure' type='quantitative' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]'>
+            <groupfilter function='level-members' level='[none:Table Name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Longitude (generated)]' field-type='quantitative' max='10078113.062653374' min='-13535655.594831144' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Latitude (generated)]' field-type='quantitative' max='17507253.229496248' min='-12067273.412056195' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Longitude (generated)]' value='false' />
+            <format attr='break-on-special' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Longitude (generated)]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Longitude (generated)]' value='false' />
+            <format attr='band-size' scope='rows' value='0' />
+            <format attr='band-size' scope='cols' value='0' />
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='dark' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='color' value='#f6c700' />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='color' value='#f6c700' />
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-size' value='10' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' />
+              <lod column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Country:nk]' />
+              <size column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.7900552749633789' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.165z5241gt3u1a10dy11x1w3cj9c].[Latitude (generated)]</rows>
+        <cols>[federated.165z5241gt3u1a10dy11x1w3cj9c].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{2E9F70B6-0040-4944-80D0-F08310C982CC}' />
+    </worksheet>
+    <worksheet name='Planilha 7'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='imdb_250 (top_250_films)' name='federated.165z5241gt3u1a10dy11x1w3cj9c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.165z5241gt3u1a10dy11x1w3cj9c'>
+            <column caption='Ranking (numérico)' datatype='integer' name='[Calculation_2293176654616170497]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='int(REPLACE([Ranking], &apos;=&apos;, &apos;&apos;))' />
+            </column>
+            <column datatype='string' name='[Ranking]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+                <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+                <alias key='&quot;imdb_250&quot;' value='IMDb' />
+              </aliases>
+            </column>
+            <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2293176654616170497]' derivation='None' name='[none:Calculation_2293176654616170497:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Title]' derivation='None' name='[none:Title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2293176654616170497]' derivation='Sum' name='[sum:Calculation_2293176654616170497:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Calculation_2293176654616170497:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>25</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.165z5241gt3u1a10dy11x1w3cj9c].[sum:Calculation_2293176654616170497:qk]' shelf='columns'>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Title:nk]' member-value='&quot;Jeanne Dielman, 23, quai du commerce, 1080 Bruxelles&quot;' />
+              </sort-filter-info>
+            </shelf-sort-v2>
+            <shelf-sort-v2 dimension-to-sort='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Title:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.165z5241gt3u1a10dy11x1w3cj9c].[sum:Calculation_2293176654616170497:qk]' shelf='rows'>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' member-value='&quot;bfi_250&quot;' />
+              </sort-filter-info>
+            </shelf-sort-v2>
+          </shelf-sorts>
+          <slices>
+            <column>[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Calculation_2293176654616170497:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.165z5241gt3u1a10dy11x1w3cj9c].[sum:Calculation_2293176654616170497:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Title:nk]</rows>
+        <cols>[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]</cols>
+      </table>
+      <simple-id uuid='{B503B139-F889-4718-9F9A-E3EC729940DA}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Painel 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='11' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='8' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+              <zone h='98000' id='6' type-v2='layout-basic' w='98400' x='800' y='1000'>
+                <zone h='98000' id='3' is-scaled='1' param='C:/Users/sergi/OneDrive/Documents/Projeto - IMDb/Top 250 Filmes.png' type-v2='bitmap' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='56375' id='5' name='Filtro Pós-IMDb' show-title='false' w='44700' x='51500' y='29000' />
+        <zone h='41250' id='9' name='Filtro Pós-Letterboxd' show-title='false' w='37700' x='1900' y='56625' />
+        <zone h='6500' id='12' type-v2='dashboard-object' w='16400' x='79000' y='87875'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{20BBE2D5-EE27-410E-8CF3-6809864A98E1}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Próximo</caption>
+              <button-caption-font-style fontname='Tableau Bold' fontsize='12' />
+              <format attr='background-color' value='#f6c700' />
+            </button-visual-state>
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='20' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='19' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='98000' id='3' is-fixed='true' is-scaled='1' param='C:/Users/sergi/OneDrive/Documents/Projeto - IMDb/Top 250 Filmes.png' type-v2='bitmap' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='56375' id='5' is-fixed='true' name='Filtro Pós-IMDb' show-title='false' w='44700' x='51500' y='29000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='41250' id='9' is-fixed='true' name='Filtro Pós-Letterboxd' show-title='false' w='37700' x='1900' y='56625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='12' type-v2='dashboard-object' w='16400' x='79000' y='87875'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{20BBE2D5-EE27-410E-8CF3-6809864A98E1}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Próximo</caption>
+                      <button-caption-font-style fontname='Tableau Bold' fontsize='12' />
+                      <format attr='background-color' value='#f6c700' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6E8089DE-97DE-4384-BEEC-3AA2FA7010B4}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Painel 2'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='imdb_250 (top_250_films)' name='federated.165z5241gt3u1a10dy11x1w3cj9c' />
+      </datasources>
+      <datasource-dependencies datasource='federated.165z5241gt3u1a10dy11x1w3cj9c'>
+        <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+          <aliases>
+            <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+            <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+            <alias key='&quot;imdb_250&quot;' value='IMDb' />
+          </aliases>
+        </column>
+        <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='21' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='20' is-scaled='1' param='C:/Users/sergi/OneDrive/Documents/Projeto - IMDb/Top 250 Filmes - Page 2.png' type-v2='bitmap' w='98400' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='43250' id='9' name='Média de número de avaliações' show-title='false' w='52300' x='2500' y='40125' />
+        <zone h='66875' id='16' name='Gêneros mais populares' show-title='false' w='41800' x='55800' y='42750' />
+        <zone h='12625' id='19' mode='radiolist' name='Gêneros mais populares' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' show-title='false' type-v2='filter' w='12100' x='82100' y='35000' />
+        <zone h='6500' id='22' type-v2='dashboard-object' w='16400' x='9700' y='8875'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{6DD58B59-F076-47FE-ABC8-E99913F5186C}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Anterior</caption>
+              <button-caption-font-style fontname='Tableau Bold' fontsize='12' />
+              <format attr='background-color' value='#f6c700' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='6500' id='29' type-v2='dashboard-object' w='16400' x='38000' y='86625'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{3904157F-ACD8-403E-8C26-3399359B7F83}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Próximo</caption>
+              <button-caption-font-style fontname='Tableau Bold' fontsize='12' />
+              <format attr='background-color' value='#f6c700' />
+            </button-visual-state>
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1100' minheight='1100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='31' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='30' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='98000' id='20' is-fixed='true' is-scaled='1' param='C:/Users/sergi/OneDrive/Documents/Projeto - IMDb/Top 250 Filmes - Page 2.png' type-v2='bitmap' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='22' type-v2='dashboard-object' w='16400' x='9700' y='8875'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{6DD58B59-F076-47FE-ABC8-E99913F5186C}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Anterior</caption>
+                      <button-caption-font-style fontname='Tableau Bold' fontsize='12' />
+                      <format attr='background-color' value='#f6c700' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43250' id='9' is-fixed='true' name='Média de número de avaliações' show-title='false' w='52300' x='2500' y='40125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='15750' id='19' mode='dropdown' name='Gêneros mais populares' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' show-title='false' type-v2='filter' w='12100' x='57100' y='40750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='66875' id='16' is-fixed='true' name='Gêneros mais populares' show-title='false' w='41800' x='55800' y='42750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='29' type-v2='dashboard-object' w='16400' x='38000' y='86625'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{3904157F-ACD8-403E-8C26-3399359B7F83}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Próximo</caption>
+                      <button-caption-font-style fontname='Tableau Bold' fontsize='12' />
+                      <format attr='background-color' value='#f6c700' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{7535D68E-D89E-488F-98A6-57112B11F3D7}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Painel 3'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='imdb_250 (top_250_films)' name='federated.165z5241gt3u1a10dy11x1w3cj9c' />
+      </datasources>
+      <datasource-dependencies datasource='federated.165z5241gt3u1a10dy11x1w3cj9c'>
+        <column datatype='string' name='[Table Name]' role='dimension' type='nominal'>
+          <aliases>
+            <alias key='&quot;bfi_250&quot;' value='BFI Sight &amp; Sound' />
+            <alias key='&quot;boxd_250&quot;' value='Letterboxd' />
+            <alias key='&quot;imdb_250&quot;' value='IMDb' />
+          </aliases>
+        </column>
+        <column-instance column='[Table Name]' derivation='None' name='[none:Table Name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='23' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='20' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+              <zone h='98000' id='13' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='98000' id='11' type-v2='layout-basic' w='98400' x='800' y='1000'>
+                  <zone h='98000' id='16' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                    <zone h='98000' id='17' is-scaled='1' param='C:/Users/sergi/OneDrive/Documents/Projeto - IMDb/Top 250 Filmes - Page 3.png' type-v2='bitmap' w='98400' x='800' y='1000'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='44875' id='18' name='Planilha 4' show-title='false' w='33300' x='64000' y='52125'>
+          <layout-cache cell-count-w='6' non-cell-size-w='62' type-h='fixed' type-w='cell' />
+        </zone>
+        <zone h='96875' id='21' name='Planilha 6' show-title='false' w='61900' x='1500' y='1500'>
+          <layout-cache minwidth='202' type-h='fixed' type-w='scalable' />
+        </zone>
+        <zone h='11750' id='24' mode='radiolist' name='Planilha 6' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' show-title='false' type-v2='filter' w='16800' x='25200' y='75125' />
+        <zone h='6500' id='25' type-v2='dashboard-object' w='16400' x='64100' y='22500'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{20BBE2D5-EE27-410E-8CF3-6809864A98E1}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Anterior</caption>
+              <button-caption-font-style fontname='Tableau Bold' fontsize='12' />
+              <format attr='background-color' value='#f6c700' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='6500' id='26' type-v2='dashboard-object' w='16400' x='81200' y='22500'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{6DD58B59-F076-47FE-ABC8-E99913F5186C}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Início</caption>
+              <button-caption-font-style fontname='Tableau Bold' fontsize='12' />
+              <format attr='background-color' value='#f6c700' />
+            </button-visual-state>
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1100' minheight='1100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='28' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='27' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='98000' id='17' is-fixed='true' is-scaled='1' param='C:/Users/sergi/OneDrive/Documents/Projeto - IMDb/Top 250 Filmes - Page 3.png' type-v2='bitmap' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='11750' id='24' mode='dropdown' name='Planilha 6' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' show-title='false' type-v2='filter' w='16800' x='25200' y='75125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='96875' id='21' is-fixed='true' name='Planilha 6' show-title='false' w='61900' x='1500' y='1500'>
+                  <layout-cache minwidth='202' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='25' type-v2='dashboard-object' w='16400' x='64100' y='22500'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{20BBE2D5-EE27-410E-8CF3-6809864A98E1}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Anterior</caption>
+                      <button-caption-font-style fontname='Tableau Bold' fontsize='12' />
+                      <format attr='background-color' value='#f6c700' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='26' type-v2='dashboard-object' w='16400' x='81200' y='22500'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{6DD58B59-F076-47FE-ABC8-E99913F5186C}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Início</caption>
+                      <button-caption-font-style fontname='Tableau Bold' fontsize='12' />
+                      <format attr='background-color' value='#f6c700' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48000' id='18' is-fixed='true' name='Planilha 4' show-title='false' w='33300' x='64000' y='49000'>
+                  <layout-cache cell-count-w='6' non-cell-size-w='62' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{125D02AB-FFE8-4FAE-B6B6-6B4F93B0AE91}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Filtro Pós-IMDb'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{24CC40FD-5E61-4FEC-AB26-EF3A6E7083CA}' />
+    </window>
+    <window class='worksheet' name='Filtro Pós-Letterboxd'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{795883D1-F6B1-427D-8395-8B1A3AE04E53}' />
+    </window>
+    <window class='worksheet' name='Média de número de avaliações'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[avg:Number of ratings:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{46F4CEC8-336A-487C-8BF9-FE1E482F60AB}' />
+    </window>
+    <window class='worksheet' name='Gêneros mais populares'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card mode='radiolist' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' show-title='false' type='filter' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[Genres (grupo) 1]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{46E6075E-7799-408E-94D8-2C5DF373D6CD}' />
+    </window>
+    <window class='worksheet' name='Planilha 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DFB4AAFD-A182-4CBB-A524-9B47034635C2}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Planilha 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card mode='radiolist' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' show-title='false' type='filter' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[__tableau_internal_object_id__].[cnt:imdb_250_61B4A56179B44D28BFE5888C091548BE:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{204860A5-6968-431F-9F27-EC16F3F371C0}' />
+    </window>
+    <window class='worksheet' name='Planilha 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{36489091-AB65-4327-8874-BE6C09A66662}' />
+    </window>
+    <window class='worksheet' name='Planilha 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[none:Table Name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{15C2E214-5C49-4259-AD08-790BDCFE2D78}' />
+    </window>
+    <window class='worksheet' name='Planilha 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card param='[federated.165z5241gt3u1a10dy11x1w3cj9c].[France (group)]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5087CCA1-1010-4B10-A0F6-FB17BB9A4835}' />
+    </window>
+    <window class='dashboard' name='Painel 1'>
+      <viewpoints>
+        <viewpoint name='Filtro Pós-IMDb'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Filtro Pós-Letterboxd'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='12' />
+      <simple-id uuid='{6DD58B59-F076-47FE-ABC8-E99913F5186C}' />
+    </window>
+    <window class='dashboard' name='Painel 2'>
+      <viewpoints>
+        <viewpoint name='Gêneros mais populares' />
+        <viewpoint name='Média de número de avaliações' />
+      </viewpoints>
+      <active id='29' />
+      <simple-id uuid='{20BBE2D5-EE27-410E-8CF3-6809864A98E1}' />
+    </window>
+    <window class='dashboard' name='Painel 3'>
+      <viewpoints>
+        <viewpoint name='Planilha 4'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Planilha 6'>
+          <zoom type='entire-view' />
+          <map-navigation value='1' />
+        </viewpoint>
+      </viewpoints>
+      <active id='26' />
+      <simple-id uuid='{3904157F-ACD8-403E-8C26-3399359B7F83}' />
+    </window>
+  </windows>
+</workbook>
